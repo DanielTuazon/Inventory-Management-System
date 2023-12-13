@@ -1,0 +1,1336 @@
+PHP Project Inventory Management System using 
+HTML CSS JavaScript jQuery PHP MySQL - Source Code
+
+
+
+
+[Introduction Zero 1:]
+
+We'll see how to connect website to dbms
+HTML CSS JavaScript jQuery PHP MySQL will be used
+Learn to code and create the home page and system
+and all other stuff, and to expert mysql data to pdf
+and then how to export our data to microsoft excel file
+file then integrate a video there then styled
+buttons near footer
+
+Semantic Elements in HTML
+Many web sites contain HTML code like: <div id="nav">
+ <div class="header"> <div id="footer"> to indicate
+ navigation, header, and footer.
+
+In HTML there are some semantic elements that can be
+used to define different parts of a web page:  
+
+    <article>
+    <aside>
+    <details>
+    <figcaption>
+    <figure>
+    <footer>
+    <header>
+    <main>
+    <mark>
+    <nav>
+    <section>
+    <summary>
+    <time>
+
+Then learn login form in our system and functionality
+that connects our database, then the graphs inside
+and others like it.
+We have the product management module that show
+the products, and edit or update them, you know
+the UPDATE, ADD, DELETE
+You can edit supplier data
+Next tab is order and stuff like that
+Next is the iser management create user stuff
+Log out and Log in
+
+
+
+
+[Creating a Log In Form Page Using HTML, CSS and PHP 2:]
+
+Design will guide us Also make own folder for imgs
+then make html and css other files. Get an image for background
+
+Definition and Usage
+When used together with the <label> element, the for attribute
+specifies which form element a label is bound to.
+
+When used together with the <output> element, the for attribute 
+specifies the relationship between the result
+of the calculation, and the elements used in the calculation.
+
+The HTML <form> element can contain one or more
+make folders for css
+
+
+/*div.container*/
+
+/*.container{
+    display: none;
+} This will make everything inside container disappear*/
+
+
+/*.container{
+    background: url('/images/login-background.jpg') no-repeat center center fixed;
+    background-size: cover; */
+    /*background: url('../images/login-background.jpg')*/
+    /*center*/
+/* } */
+
+/*
+::after
+In CSS, ::after creates a pseudo-element that is the 
+last child of the selected element. It is often used to
+add cosmetic content to an element with the content
+property. It is inline by default. */
+
+/*.dead-link::after {
+  content: url('../../media/warning.svg');
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+
+.topic-games::after {
+  content: '🎮 ';
+}
+
+.topic-weather::before {
+  content: '⛅ ';
+}
+
+The value of said property is adjusted automatically
+according to the content or the context of the element.
+
+For example, a block-level element with height: auto
+will grow taller as it contains more text. For another
+example, a block element with margin: 0 auto will have
+the left and right margins increased until it becomes
+centered along the y-axis of the viewport.
+
+CSS introduced the ::after notation (with two colons)
+to distinguish pseudo-classes from pseudo-elements.
+For backward compatibility, browsers also accept
+:after, introduced earlier.
+It really depends on the property you give the value
+to, different properties behave differently depending
+on the content and context.
+*/
+
+/*:: = pseudo elements : = psuedo classes*/
+
+/*here use tag instead of a class*/
+
+   border: 2px solid #fff;
+/*Notice instead of sumoning other properties
+    their values are summoned here, like the solid
+    is border-width, then border-color after*/
+
+/*This property is specified as a comma-separated list of shadows.*/
+/*Look it up further as theres more into this:  color | offset-x | offset-y | blur-radius
+                                                text-shadow: #fc0 1px 0 10px;             */
+
+    /*Text Shadow simulating Text Border is my addition*/
+    /*-webkit-text-stroke: 2px #fff;*/
+    /*Read and comprehend this, look up text-shadow*/
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+            
+
+
+
+[Create Your First Website Homepage Part One 3:]
+
+A modern css reset
+https://andy-bell.co.uk/a-modern-css-reset/
+Reset style sheet
+A reset stylesheet is a collection of CSS rules used
+to clear the browser's default formatting of HTML
+elements, removing potential inconsistencies between
+different browsers. It also prevents developers from
+unknowingly relying on the browser default styling and
+force them to be explicit about the styling they want to
+apply on the page
+
+https://fontawesome.com/start
+email:danieltuazon222@gmail.com
+pass:greekmythology
+you can find icons there and grab their code using
+anchor (a) as a medium 
+
+Font Awesome is the Internet's icon library and toolkit,
+used by millions of designers, developers, and content
+creators. (Remember JQUERY is a external library)
+
+all
+
+The all shorthand CSS property resets all of an
+element's properties except unicode-bidi, direction,
+and CSS Custom Properties. It can set properties to
+their initial or inherited values, or to the values
+specified in another cascade layer or stylesheet origin.
+
+https://www.impressivewebs.com/css3-transition-all/
+
+ transition: all 1s ease-in;
+
+
+
+
+[Create Your First Website Homepage Part Two 4:]
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+
+So position relative, I get it now
+With this the normal position is where its standing
+and it moves away from it to go to right if right is set
+or it goes the other way around, so it moves away from
+where its normally positioned.
+
+So lets say if it was in a div or something:
+It will move inside that div and relative to that
+div, so where it's position in that div, it moves
+from there. Still confusing but i think it sounds right
+
+<p>An element with position: relative; is positioned relative to its normal position:</p>
+
+<div class="relative">
+This div element has position: relative;
+</div>
+
+
+An element with position: relative; is positioned relative
+to its normal position.
+
+Setting the top, right, bottom, and left properties of a
+relatively-positioned element will cause it to be adjusted
+away from its normal position. Other content will not be
+adjusted to fit into any gap left by the element. 
+
+
+So here's the logic behint postion: relative
+if its inside a div exactly it will include it will work
+or move relative to the div, so it becomes part of div
+Still not sure though, yeah...
+
+Also, the body element has its own padding, so I tested it
+The padding of body will be ignored by an element like p
+that has a styling position: relative. So no padding
+
+While the terms GPU and graphics card (or video card) are 
+often used interchangeably, there is a subtle distinction 
+between these terms. Much like a motherboard contains a CPU,
+a graphics card refers to an add-in board that incorporates
+the GPU.
+
+/*
+[offset-x | offset-y | blur-radius | color]
+text-shadow: 1px 1px 2px black;
+
+[color | offset-x | offset-y | blur-radius]
+text-shadow: #fc0 1px 0 10px;
+
+[offset-x | offset-y | color]
+text-shadow: 5px 5px #558abb;
+
+[color | offset-x | offset-y]
+text-shadow: white 2px 5px;
+
+[offset-x | offset-y]
+Use defaults for color and blur-radius
+text-shadow: 5px 10px;
+
+[Global values]
+text-shadow: inherit;
+text-shadow: initial;
+text-shadow: revert;
+text-shadow: revert-layer;
+text-shadow: unset;
+*/
+
+Remember in coding like this the coloring is not important
+aslong as its correct, because the colors are just ide
+simplification the browser will be the one to read and run that
+
+ctrl + left arrow or right arrow to immidiately move
+ctrl + f to use finder
+
+look up CSS combinators
+
+> is the child combinator, sometimes mistakenly called the
+direct descendant combinator.1
+
+That means the selector div > p.some_class only matches
+paragraphs of .some_class that are nested directly inside a
+div, and not any paragraphs that are nested further within.
+This implies that every element matching div > p.some_class
+necessarily also matches div p.some_class, with the descendant
+combinator (space), so the two are understandably often confused.
+
+[=========================================================]
+You know, you can just make a documentation format like this:
+Take the keywords worth noting and everything close to that,
+Place it at top, then use ctrl + find to find the documentation
+of it here, even go and make a special code for it and match it.
+Then along with the explanation or documentation add a code that
+perfectly encapsulates or conveys how it work. Here's a look:
+
+CSS Selectors = @#154321
+Div Element = @#563231
+CSS combinators = @#756331
+auto value = @#485674
+
+@#485674 :
+BLASDIUAHUADUSHANSCKXHINASUDGACS
+
+@#756331 :
+BLASDIUAHUADUSHANSCKXHINASUDGACS
+
+So basically its like a quick access or search protocol.
+You can even go further and organize it by relation.
+CSS property keywords next to each other and HTML Element
+Tag keywords next to each other, and everything else.
+[=========================================================]
+
+Also you can make and design website layouts in Photoshop
+
+Also study webpage size as it matters when designing
+Screen size. Broom broom also webpage natural size is 1080p
+
+
+
+[Create An Admin Dashboard Sidebar Menu 5:]
+100% can be 100% of the height of anything. For example, 
+if I have a parent div that's 1000px tall, and a child div
+that is at 100% height, then that child div could
+theoretically be much taller than the height of the
+viewport, or much smaller than the height of the viewport,
+even though that div is set at 100% height.
+
+If I instead make that child div set at 100vh, then
+it'll only fill up 100% of the height of the viewport,
+and not necessarily the parent div.
+
+Create a Clickable Dropdown
+
+Create a dropdown menu that appears when the user clicks on a button.
+Step 1) Add HTML:
+ <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div> 
+
+Example Explained
+
+Use any element to open the dropdown menu, e.g. a <button>, <a> or <p> element.
+
+Use a container element (like <div>) to create the dropdown menu and add the dropdown links inside it.
+
+Wrap a <div> element around the button and the <div> to position the dropdown menu correctly with CSS.
+
+Step 2) Add CSS:
+
+ /* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+
+Example Explained
+
+We have styled the dropdown button with a background-color, padding, hover effect, etc.
+
+The .dropdown class uses position:relative, which is needed when we want the dropdown content to be placed right below the dropdown button (using position:absolute).
+
+The .dropdown-content class holds the actual dropdown menu. It is hidden by default, and will be displayed on hover (see below). Note the min-width is set to 160px. Feel free to change this. Tip: If you want the width of the dropdown content to be as wide as the dropdown button, set the width to 100% (and overflow:auto to enable scroll on small screens).
+
+Instead of using a border, we have used the box-shadow property to make the dropdown menu look like a "card". We also use z-index to place the dropdown in front of other elements.
+
+Step 3) Add JavaScript:
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+
+Right-aligned dropdown
+
+Aligned Dropdown Content
+
+Use float: right on the dropdown class to float the dropdown menu to the right, and right:0 on the dropdown-content if you want the dropdown content to go from right to left.
+
+AND MORE DROPDOWNS IN https://www.w3schools.com/howto/howto_js_dropdown.asp
+
+Below Could Be Helpful:
+https://www.javatpoint.com/how-to-remove-bullet-points-in-css
+
+
+
+
+
+[Create A Login Logout System Using Sessions 6:]
+We, will work with the database here:
+Remember that to use local host or server place
+the code files in htdocs inside xampp folder
+to look it up do localhost/then here the name
+
+XAMPP PHP installation
+
+To make your html files work with sql and php, turn it into .php files when in htdocs
+
+From here on out, do exactly what is asked of you, and don't add any more!
+That problem with the background: url was a pain in the fuckin ass
+
+The tutorial guy has two xampp apps/folder? what?
+
+Here is all you need to know about relative file paths:
+
+Starting with “/” returns to the root directory and starts there
+Starting with “../” moves one directory backwards and starts there
+Starting with “../../” moves two directories backwards and starts there (and so on…)
+To move forward, just start with the first subdirectory and keep moving forward
+
+With php and editing it, or when using server, xampp and stuff
+
+Do Ctrl + F5 as a real refresh to truly refresh
+Or in our limited keyboard's case, do Ctrl + Fn + F5
+Probably because of cache and stuff
+https://stackoverflow.com/questions/12683417/localhost-wont-immediately-update
+Either this or move to WAMP
+
+We want the homepage.php to be the first page to go in
+So the xampp of server/web will first look for that if you
+make homepage.php into index.php, which we'll do right now
+
+And then all you need to do now is open the folder and it will
+open that first, without adding /homepage.php or /index.php there
+
+With programming keep attention to the locations
+Location of folders and files
+The location the codes are pointing to
+Which file the code is pointing at
+Keep mind of extension, servers, local and others
+
+So if you turned the files from html to php,
+Find the anchors and change the links its pointing at
+
+xampp acts like a server in our local machine
+So whats a database?
+You can access our database inside this software
+helps us access and manage our database
+Do this localhost/phpmyadmin/
+
+Create inventory database in new
+in inventory database you can create a table
+which is basically a storage, so our related data can store there
+its rows and columns looks like in database, inside are database
+So users table
+properties of our users table
+First name column last name column and password column and email column
+below the column are datas and rowed 
+so thats database table stuff whatever you know this read your notebooks
+Add column created-at and updated-at at the very editing
+
+on create table place the users name and then pick seven on numbers of columns
+D:\CODING\Coding Practice\PHP Project Inventory Management System Old Version\screenshots for clarification\SettingUpTable.PNG
+
+A_I is auto increment for unique id act
+as unique identifier (in relation to our goal)
+
+varchar is a string, 50 is our maximum characters
+there's char and varchar in sql, go find out the difference online
+
+table structure button to check structure.
+Click the users table so you can find the insert tab on top
+there you can insert manually without php or webpage
+Leave id value alone as it has auto increment
+you can set the date time to or just use auto value it has
+once you're done, hit go on lower right corner
+
+Now go to browse tab, now we have one record
+So next is go to login.php or page and lets use some PHP! Woo lets go!
+Alright now lets put php code at the very top of the login code file
+
+TechSmith Snagit Recorder was the screen recording software he uses
+
+
+
+The double arrow operator, =>, is used as an access mechanism for
+arrays. This means that what is on the left side of it will have a
+corresponding value of what is on the right side of it in array
+context. This can be used to set values of any acceptable type into
+a corresponding index of an array. The index can be associative
+(string based) or numeric.
+
+$myArray = array(
+    0 => 'Big',
+    1 => 'Small',
+    2 => 'Up',
+    3 => 'Down'
+);
+
+The object operator, ->, is used in object scope to access methods
+and properties of an object. It’s meaning is to say that what is on
+the right of the operator is a member of the object instantiated into
+the variable on the left side of the operator. Instantiated is the
+key term here.
+
+// Create a new instance of MyObject into $obj
+$obj = new MyObject();
+// Set a property in the $obj object called thisProperty
+$obj->thisProperty = 'Fred';
+// Call a method of the $obj object named getProperty
+$obj->getProperty();
+
+
+
+=> is used in associative array key value assignment. Take a look at:
+
+http://php.net/manual/en/language.types.array.php.
+
+-> is used to access an object method or property. Example: $obj->method().
+
+When the left part is an object instance, you use ->. Otherwise, you use ::.
+
+This means that -> is mostly used to access instance members (though it can also be used to access static members, such usage is discouraged), while :: is usually used to access static members (though in a few special cases, it's used to access instance members).
+
+In general, :: is used for scope resolution, and it may have either a class name, parent, self, or (in PHP 5.3) static to its left. parent refers to the scope of the superclass of the class where it's used; self refers to the scope of the class where it's used; static refers to the "called scope" (see late static bindings).
+
+The rule is that a call with :: is an instance call if and only if:
+
+    the target method is not declared as static and
+    there is a compatible object context at the time of the call, meaning these must be true:
+        the call is made from a context where $this exists and
+        the class of $this is either the class of the method being called or a subclass of it.
+
+https://stackoverflow.com/questions/3173501/whats-the-difference-between-double-colon-and-arrow-in-php
+https://www.php.net/manual/en/class.pdostatement.php
+https://www.sitepoint.com/re-introducing-pdo-the-right-way-to-access-databases-in-php/
+
+We learned how to log in also with help of Sessions
+now is how to Logout
+And that is to delete or destroy all the session variables
+PHP's PDO is indeed a library
+
+Also with inspect or devtool
+Atleast in chrome at At middle navbar on style
+you can fully style it in there. The plus button on bottom right side
+can make CSS specificators, the line is also told and which file in the top right corner
+really just useful stuff for testing.
+You can also see which inherited which ther on top of them
+
+
+[Create User Registration Form Insert Data into MySQL Database 7:]
+created_at automatically updates
+
+result of $_session
+
+https://www.php.net/manual/en/language.operators.php
+
+So this array is from $_SESSION[] this came from add.php when we use var_dump($_SESSION);
+  The two in parenthesis is the number of correspond with the one its attached to
+
+The "user" was set on login.php and forwards. "table" was set on user-add.php forwards
+array(2) {
+  ["user"]=> array(7) { ["id"]=> string(1) "2" ["first_name"]=> string(6) "Dahyun" ["last_name"]=> string(3) "Kim" ["password"]=> string(6) "dahyun" ["email"]=> string(17) "kimdahyun@ims.com" ["created_at"]=> string(19) "2023-11-19 19:54:35" ["updated_at"]=> string(19) "2023-11-19 19:54:35" } 
+  ["table"]=> string(5) "users"}
+
+This array and its data are set by the form input
+array(4) { 
+  ["first_name"]=> string(6) "asdasd" ["last_name"]=> string(6) "asdasd" ["email"]=> string(6) "asdasd" ["password"]=> string(6) "asdasd" } 
+
+
+
+
+
+
+
+
+[How To Fetch Data from MySQL Database and Display in HTML Table using PHP PDO 8:]
+
+
+
+https://stackoverflow.com/questions/14037290/what-does-this-mean-in-php-or
+
+The double arrow operator, =>, is used as an access mechanism for arrays. This means that what is on the left side of it will have a corresponding value of what is on the right side of it in array context. This can be used to set values of any acceptable type into a corresponding index of an array. The index can be associative (string based) or numeric.
+
+$myArray = array(
+    0 => 'Big',
+    1 => 'Small',
+    2 => 'Up',
+    3 => 'Down'
+);
+
+The object operator, ->, is used in object scope to access methods and properties of an object. It’s meaning is to say that what is on the right of the operator is a member of the object instantiated into the variable on the left side of the operator. Instantiated is the key term here.
+
+// Create a new instance of MyObject into $obj
+$obj = new MyObject();
+// Set a property in the $obj object called thisProperty
+$obj->thisProperty = 'Fred';
+// Call a method of the $obj object named getProperty
+$obj->getProperty();
+
+
+Let's take an example:
+
+foreach ($array as $value) {}
+
+This means
+
+    foreach element (of $array) defined as $value...
+
+In other words this means that the elements of the array will be retrieved inside the loop as $value. Notice that you can specify also this syntax:
+
+foreach ($array as $key => $value) {}
+
+In both ways the vars $key and $value will exists inside the foreach and will correspond to the 'current' element of the array.
+
+
+foreach ¶
+
+(PHP 4, PHP 5, PHP 7, PHP 8)
+
+The foreach construct provides an easy way to iterate over arrays. foreach works only on arrays and objects, and will issue an error when you
+try to use it on a variable with a different data type or an uninitialized variable. There are two syntaxes: 
+
+https://www.w3schools.com/php/php_looping_foreach.asp
+
+PHP foreach Loop
+
+The foreach loop - Loops through a block of code for each element in an array.
+The PHP foreach Loop
+
+The foreach loop works only on arrays, and is used to loop through each key/value pair in an array.
+
+https://www.phptutorial.net/php-oop/php-try-catch/
+
+https://www.php.net/manual/en/language.exceptions.php
+
+
+
+
+[How To Delete Data from MySQL Database with AJAX jQuery JavaScript PHP BootstrapDialog 9:]
+
+This below code makes it so when you click at anypart of the page
+a hi will be produced in console
+
+<script>
+        function script(){
+
+            this.initialize = function(){
+                this.registerEvents();
+            }
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(){
+                    console.log("hi");
+                });
+            }
+
+        }
+
+        var script = new script;
+        script.initialize();
+    </script>   
+
+This below block of code will show the event data.
+You know, you can just check the objects classes and method, functions
+and the multiple parameters inside them in documentation
+
+<script>
+        function script(){
+
+            this.initialize = function(){
+                this.registerEvents();
+            }
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(e){
+                    console.log(e);
+                });
+            }
+
+        }
+
+        var script = new script;
+        script.initialize();
+    </script>   
+
+Below code you'll see something in console
+
+function script(){
+
+            this.initialize = function(){
+                this.registerEvents();
+            }
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(e){
+                    classList = e.target.classList;
+                    console.log(classList);
+                });
+            }
+
+        }
+
+        var script = new script;
+        script.initialize();
+
+https://www.w3schools.com/jsref/obj_window.asp
+
+
+if(window.confirm('Are you sure to delete? '+ fullName +'?')){
+    console.log('Will delete');
+} else {
+    window.alert('Won'+ "'" +'t delete');
+    console.log('Won'+ "'" +'t Delete')
+}
+
+
+
+
+
+[How To Update Data in MySQL Database using AJAX/JQuery/JavaScript PHP BootstrapDialog 10:]
+
+First, realize that AJAX is a concept, not a specific technology or API. Second, look at what
+AJAX stands for: Asynchronous JavaScript And XML. The asynchronous part has never been lost.
+If anything, it's grown and now we have things like promises and async/await.
+
+People moved away from XML (and to JSON). In the past, you would have used XMLHttpRequest
+to make a server request. Now, most people now just use fetch and return JSON from the server.
+
+Time to use Bootstrap's modal monkey-friendly
+Bootstrap3-dialog > copy link tag
+
+Bootstrap 3.3.7 CDN:
+https://blog.getbootstrap.com/2016/07/25/bootstrap-3-3-7-released/
+
+Overview:
+https://nakupanda.github.io/bootstrap3-dialog/
+
+Download Here:
+https://cdnjs.com/libraries/bootstrap3-dialog
+[3rd on the line in downloads]
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.min.css" integrity="sha512-PvZCtvQ6xGBLWHcXnyHD67NTP+a+bNrToMsIdX/NUqhw+npjLDhlMZ/PhSHZN4s9NdmuumcxKHQqbHlGVqc8ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+[1st on the line in downloads]
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.js" integrity="sha512-AZ+KX5NScHcQKWBfRXlCtb+ckjKYLO1i10faHLPXtGacz34rhXU8KM4t77XXG/Oy9961AeLqB/5o0KTJfy2WiA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+Remember that the tutorial guy and you use different ide, browser, and the time difference make
+some of his points obsolete, so keep that in mind.
+
+This below pops up, even though he didn't get it, because the tutorial was years ago
+[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) <input type=​"password" class=​"appFormInput" id=​"password" name=​"password">​
+
+
+Also firefox doesn't outright show what it got, but google does with this in regard:
+if(classList.contains('updateUser')){
+    e.preventDefault();
+    
+    //Get data. It will target and get that data?
+    //This will be inside one tr anyway so it'll target closest tr with td equal to that class, td.firstName example
+    firstName = targetElement.closest('tr').querySelector('td.firstName');
+    lastName = targetElement.closest('tr').querySelector('td.lastName');
+    email = targetElement.closest('tr').querySelector('td.email');
+    
+    //this pulls out information related to that td next to class
+    console.log(firstName, lastName, email);
+}
+
+
+Results in Chrome:
+<td class="firstName"> 
+<td class="lastName"> 
+<td class="email">
+
+
+Results in firefox:
+<td class="firstName">Chaeyoung</td>
+<td class="lastName">Son</td>
+<td class="email">sonchaeyoung@gmail.com</td>
+
+https://css-tricks.com/almanac/properties/t/text-overflow/
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text
+
+https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/
+
+
+
+
+
+
+
+
+[Entity Relationship Diagram (ERD) | Create Tables Using MySQL Command in phpMyAdmin 11:]
+At the moment only have one database table
+ERD is A
+type of structural deiagram for use in databases design.
+import tables and stuff before that we design entity relation program
+
+it contains different symbols and connectors that visualize two important information: the major
+entities within the system scope, and the inter-relationships among these entities.
+
+data entities
+check the notebook for sql
+ER Diagrams in notebook SQL:
+
+Go use lucid.app web for designing database if you want
+
+Products table:
+
+column        values
+id            PK
+product_name  String
+created_by    FK
+created_at    DateTime
+updated_at    DateTime
+
+ERD or Entity RelationShip Diagram are like Work FLows in programmings
+
+
+inputing manually in sql
+mayasql query
+
+In SQL we made a relation
+check products table we have primary and an index
+gold key primary the id
+silver key index the created_by
+
+check structure > relation view of products table
+index is then connected with id from table users
+
+in workflow thing lucid, you can change column of logos
+in relation to if they are completed or done with green color
+
+In, foreign key constraint creation page
+just look at the layout and you can imagine what it does
+
+You can check SQL documentation.
+Also it's possible to make a table by making commands
+using PHP AND PDO 
+
+The foreign key inside supplier relates to the id
+in users table
+
+We'll now use mySQL query instead
+and make simple query to make a table
+Go at SQL tab inside of database
+
+You can manually add a column in phpmyadmin
+just below the structure.
+
+You can leave constraint text Input box with nothing
+it can make its own name automatically
+
+Index key = Foreign key
+
+So four new tables in total have been added.
+
+/*Also note that time from database is different from our time in philippines*/
+
+
+
+
+
+
+
+[How To Create Multi Level Drop down Navigation Menu using CSS HTML JS - PART ONE 12:]
+ 
+
+ 
+ /*!important prioritizes this, cause theres hierchy or order of prioritation*/
+    padding-left: 25px !important;
+  
+a.subMenuLink{
+    /*!important prioritizes this, cause theres hierchy or */
+    padding-left: 25px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    text-transform: none;
+    
+}
+
+CSS The !important Rule
+What is !important?
+
+The !important rule in CSS is used to add more importance to a property/value than normal.
+
+In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+
+Let us look at an example:
+Example
+#myid {
+  background-color: blue;
+}
+
+.myclass {
+  background-color: gray;
+}
+
+p {
+  background-color: red !important;
+}
+
+Example Explained
+
+In the example above. all three paragraphs will get a red background color,
+even though the ID selector and the class selector have a higher specificity.
+ The !important rule overrides the background-color property in both cases.
+
+
+ul.subMenus{
+    /*This removes the dropdown bullet point signs*/
+    list-style-type: none;
+    background: #c26a80;
+    /*Had to add below this cause submenu has gap without this*/
+    margin-left: -40px;
+    /*This property below will make this part disappear,
+      you can't even find it with inspect webdevtool*/
+    display: none;
+}
+
+/*You can see the elements in left side of webdevtool
+  hover over it and youll see which covers which, usefu*/
+
+/*This is the element it targets*/
+/*<i class="fa fa-angle-up mainMenuIconArrow"></i>*/
+i.mainMenuIconArrow{
+    /*This causes the icon to go right*/
+    float: right;
+    margin-top: 5px;
+    /*This property below was supposed to inherit from above
+      this one ul.dashboard_menu_lists li.liMainMenu a i
+      The !important cut that ties*/
+    font-size: 20px !important;
+}
+
+
+
+
+
+
+
+[How To Add Remove Active Menu Class Indicator Dynamically using JavaScript - PART TWO 13:]
+
+
+This is the old code which targets only one, we needed something dynamic so we changed it:
+            
+            
+            <!--<li class="liMainMenu showHideSubMenu" data-target="user"> old code-->
+            <li class="liMainMenu showHideSubMenu" data-submenu="user">
+                <!--javascript:void(0); this will stop the default reaction of refreshing page the below code does-->
+                <!--If we only place showHideSubMenu in a element here, there will be problems to range of clicking area, we added it to element above too-->
+                <a href="javascript:void(0);" class="liMainMenu_link showHideSubMenu" data-submenu="user">
+                    <i class="fa fa-user-plus showHideSubMenu" data-submenu="user"></i>
+                    <span class="menuText showHideSubMenu" data-submenu="user">User Management</span>
+                    <i class="fa fa-angle-left mainMenuIconArrow showHideSubMenu" data-submenu="user"></i>
+                </a>
+
+                <ul class="subMenus" id="user">
+                    <li><a class="subMenuLink" href="#"><i class="fa fa-circle-o"></i> View Users</a></li> 
+                    <li><a class="subMenuLink" href="#"><i class="fa fa-circle-o"></i> Add User</a></li>
+                </ul>
+            </li>
+
+
+
+
+
+[How To Insert Data Into MySQL Database Using PHP PDO | Adding Products To Database 14:]
+Lots of script changes and seperation in this chapter so keep your eyes peeled for changes
+
+So apparently the method to displaying or placing images in database
+is with varchar so we're probably just linking images
+
+We're going to make add.php dynamic
+
+It's better to look at proper documentation instead of just the internet people answers
+
+Woo, were done, that was confusing as hell, you got to re-read the codes to fully understandably
+
+
+
+
+
+
+[Inventory System | How To Upload Files and Images into Database using PHP $_FILES 15:]
+
+Ok next part
+Also just noticed that scroll CSS Property only works in Chrome and not firefox
+
+Click xampp > config > php
+find file_uploads
+should be set at ON value is ON
+
+
+Look up for=""  attribute again 
+The for attribute associates the label with a control element, as defined in the
+description of label in the HTML 4.01 spec. This implies, among other things,
+that when the label element receives focus (e.g. by being clicked on), it passes
+the focus on to its associated control.
+
+
+
+
+
+[How to Fetch and Display Images Dynamically in HTML Table from Database using PHP MYSQL 16:]
+
+Its ok, we need to fix images overflowing from their table place Still
+
+
+
+
+
+
+
+[How To Delete Data from MySQL Database Using jQuery AJAX PHP MYSQL BootstrapDialog 17:]
+
+
+We deleted the  show-users.php file, heres the code within it:
+
+<?php
+
+//include makes it so anything in 'connection.php' can be used here
+include('connection.php');
+
+//prepare a function/objectfunction/method from $conn from connection.php
+//which has the PDO class, inside are placed in parameters
+//we specified that it be ordered by column created_at at descending
+//below specifier of order by desc stuff sets it from newly created to oldest made
+$stmt = $conn->prepare("SELECT * FROM users ORDER BY created_at DESC");
+//Then below, the execute line executes it
+//$stmt can use PDO function because it was set equal to $conn?
+$stmt->execute();
+//This below line makes it into an array, so its organized, check on var_masterpiece
+//If Fetch::assoc is not used it will be showed as indexed in var_dump, tutorial guy said
+//Basically organizes it, if not its unorganized used var_dump to see
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+return $stmt->fetchAll();
+//Below code are for checking, like console.log
+//var_dump($stmt->fetchAll());
+//die;
+
+
+?>
+
+
+
+What I'll write here is true for jQuery events,
+For vanilla javascript events read @T.J. Crowder comment at the bottom of the answer
+
+return false inside a callback prevents the default behaviour. For example, in a submit event, it doesn't submit the form.
+
+return false also stops bubbling, so the parents of the element won't know the event occurred.
+
+return false is equivalent to event.preventDefault() + event.stopPropagation()
+
+And of course, all code that exists after the return xxx line won't be executed. (as with all programming languages I know)
+
+
+Its weird with google chrome the scroll appears, but in firefox it dashboard_menu_lists
+
+also in chrome the images doesnt overflow, but in firefox it still overflows
+
+
+This below block of code was the delete-user.php code
+<?php
+    $data = $_POST;
+
+    //Adding (int) makes the data from 'string(1) "1"' (click the post line in network) to int(1)
+    //Is it turning it back into an int? Cause data is being filtered all the time
+    $user_id = (int) $data['user_id'];
+    $first_name = $data['f_name'];
+    $last_name = $data['l_name'];
+
+    //var_dump($user_id); you left this, and this stopped the alert from working, it interfered
+
+    //We copied this setup code below from add.php. So some notes might not make sense
+    try {
+        $command = "DELETE FROM users WHERE id={$user_id}";
+        //var_dump($command);
+        //die;
+        //I don't know what int(17) string(29) correspond to
+        //int(17) string(29) "DELETE FROM users WHERE id=17" 
+
+        include('connection.php');
+        //Command like how we would have typed it in phpmyadmin
+        //exec is probably a method or function inside PDO which is in $conn
+        $conn->exec($command); 
+
+
+        //What's up with echo used on json_encode?
+        //The below dots probably connect them like in javascript, concatenation
+        //echo json_encode([
+        //return json_encode([
+        echo json_encode([
+            'success' => true,
+            'message' => $first_name . ' ' . $last_name . ' is successfully deleted.'
+        ]);
+
+        //The PDOException makes it so we get a proper error message, getMessage is from $e which probably a parameter
+    } catch (PDOException $e){
+        echo json_encode([
+            'success' => false, 
+            'message' => ' Error processing your request!'
+        ]);
+    }
+
+?>
+
+Just ignore the red text it means nothing
+
+https://www.javatpoint.com/php-operators
+
+
+
+
+
+
+
+[How To Update Product Data Record in MySQL Database Using PHP PDO JQuery Ajax 18:]
+
+
+                        BootstrapDialog.confirm({
+                            title: 'Update ' + firstName + ' ' + lastName,
+                            //message: firstName + ' ' + lastName + ' ' + email
+                            //The forwards slash \ the error red thing from appearing, it passes it below I think. 
+                            //It helps pass the cover down. Remove \ on div above </form> to see
+                            //<form action="/action_page.php"> 
+                            message: '<form>\
+                                <div class="form-group">\
+                                    <label for="firstName">First Name:</label>\
+                                    <input type="text" class="form-control" id="firstName" value="'+ firstName +'">\
+                                </div>\
+                                <div class="form-group">\
+                                    <label for="lastName">Last Name:</label>\
+                                    <input type="text" class="form-control" id="lastName" value="'+ lastName +'">\
+                                </div>\
+                                <div class="form-group">\
+                                    <label for="email">Email address:</label>\
+                                    <input type="email" class="form-control" id="emailUpdate" value="'+ email +'">\
+                                </div>\
+                            </form>',
+
+                            //We changed email to emailUpdate as there are multiple email id already in page
+                            //Dont forget the comma's at the end
+                            //Make guidelines when handling various errors or bugs
+
+                            callback: function(isUpdate){ //parameter
+
+                                /* This block of code will see if this works
+                                console.log({
+                                            userId: userId,
+                                            f_name: document.getElementById('firstName').value,
+                                            l_name: document.getElementById('lastName').value,
+                                            email: document.getElementById('emailUpdate').value,
+                                });
+                                return;
+                                */
+
+                                if(isUpdate){ //If user click 'Ok' button.
+                                   // alert('Hi I'+ "'" +'m updating');
+                                   $.ajax({
+                                        method: 'POST',
+                                        //user_id correlates to one in delete-user.php
+                                        data: {
+                                            userId: userId,
+                                            f_name: document.getElementById('firstName').value,
+                                            l_name: document.getElementById('lastName').value,
+                                            email: document.getElementById('emailUpdate').value,
+                                        },
+                                        url: 'database/update-user.php',
+                                        //Set data type to json so we can easily parse, process the response
+                                        //this dataType: 'json', a little bit of a mystery how it works
+                                        dataType: 'json',
+                                        
+                                        //This update version gets message from data still check update-user.php
+                                        success: function(data){
+                                            //Probably means if data success is true or has value true
+                                            if(data.success){
+                                                BootstrapDialog.alert({
+                                                    type: BootstrapDialog.TYPE_SUCCESS,
+                                                    message: data.message,
+                                                    callback: function(){
+                                                        location.reload()
+                                                    }
+                                                });
+                                                //We're still in javascript so, learn about objects and methods like location and reload here below
+                                                //if(window.alert(data.message)){ window.alert couldn't refresh like window.confirm could
+                                                /*if(window.confirm(data.message)){
+                                                    location.reload();
+                                                }*/
+                                            } else 
+                                                BootstrapDialog.alert({
+                                                    type: BootstrapDialog.TYPE_DANGER,
+                                                    message: data.message,
+                                                });
+                                            /* Unused code
+                                            } else {
+                                                window.alert(data.message)
+                                            }
+                                            */
+                                        }
+                                    });
+                                }
+                            },
+
+                        });
+
+
+                                message: '<form>\
+                                    <div class="form-group">\
+                                        <label for="firstName">First Name:</label>\
+                                        <input type="text" class="form-control" id="firstName" value="'+ firstName +'">\
+                                    </div>\
+                                    <div class="form-group">\
+                                        <label for="lastName">Last Name:</label>\
+                                        <input type="text" class="form-control" id="lastName" value="'+ lastName +'">\
+                                    </div>\
+                                    <div class="form-group">\
+                                        <label for="email">Email address:</label>\
+                                        <input type="email" class="form-control" id="emailUpdate" value="'+ email +'">\
+                                    </div>\
+                                </form>',
+
+            Down below block of code, you can see how those variables or parameters can be changed
+
+            this.showEditDialog = function(Mike){
+                //function(data) parameter?
+                //Understand this line below the expression
+                //So productDetails will be like a placeholder or parameter, and it can pull out the items, like product_name
+                $.get('database/get-product.php', {id: Mike}, function(Johnson){
+                    //console.log(data);
+                    //This code sequence below was copied from users-view.php,
+                    BootstrapDialog.confirm({
+                                title: 'Update <strong>' + Johnson.product_name + '</strong>',
+
+
+
+
+
+[Creating MySQL Many-To-Many Relationship Junction Table - Connect Supplier To Product 19:]
+
+When we went to insert in suppliers taple, we unchecked the ignore checkbox
+Once you're done filling up two forms inside the insert tab, click the bottom right corner go button
+When he changed. show.php, when he made the $table_name = $show_table;
+instead of $table_name = $_session['table'];
+
+He then proceded to go to all files that uses show.php and added the
+ $show_table = 'products'; above, with differing values depending on the page
+
+relation view localhost is where you connect tables
+https://stackoverflow.com/questions/6186340/how-to-decide-between-using-if-else-vs-try-catch
+
+A lot of things got modified in this chapter
+
+The ? is to allow Parameterized Query. These parameterized query is to allow type-specific value when replacing the ? with their respective value.
+
+That's all to it.
+
+https://stackoverflow.com/questions/3727688/what-does-a-question-mark-represent-in-sql-queries
+
+
+
+
+
+[Inventory - How To Insert and Show Suppliers Data using HTML CSS PHP PDO MYSQL Database 20:]
+Just copy and pasting then modifying
+
+
+
+
+
+
+[How To Delete Data from MYSQL Database using HTML CSS JavaScript jQuery PHP PDO 21:]
+
+
+Many to many relations
+https://www.youtube.com/playlist?list=PLglf6-OPbGDfDFpnN67xqvTCR4WxQm4bd
+
+
+
+[Inventory System - Edit Suppliers Data using HTML CSS JS jQuery PHP PDO MYSQL Database 22:]
+You need to revisit the last few episodes to clear things up
+Too many confusing things, I also thing we need to clean up the code and remove some comments
+
+
+
+
+
+
+
+(=======)-----------[{ HUGE PAGE COMMENT COPY DUMP }]-----------(=============)
+
+
+
+
+-----------<PASTED AFTER CHAPTER 22>-----------
+
+
+
+
+[{login.css}]---{File}

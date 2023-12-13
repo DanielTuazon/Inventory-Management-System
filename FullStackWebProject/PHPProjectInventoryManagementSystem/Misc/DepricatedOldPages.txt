@@ -1,0 +1,548 @@
+/{============START OF OLD USER-ADD PAGE==================}\
+
+
+<?php
+    //Go to WA4E for more info on sessions and cookies
+    /* So without the session_start the user info collected
+        won't be accessed or pass over to this page from login
+    //session_start();
+    var_dump($_SESSION['user']);
+    die;
+    */
+    
+    session_start();
+
+    /*This refresh and prevents user from going back to dashboard. Also must be a shorthand thing */
+    /*Remember the negation thing, that ! makes isset to opposite, so that mins if is not set, header will run */
+    /*This if makes it so that just accessing this through url or address bar won't work, try accesing dashboard through url*/
+    if(!isset($_SESSION['user'])) header('location: login.php');
+    
+    /*SESSION IS LIKE TEMPORARY */
+    /*$_SESSION is an associative array, so if you use var_dump($_SESSION); you'll see its an
+      an array that can store complex or primative data, like for example the 'user'
+      So by doing. $_SESSION['Table'] = 'users'; we're adding a new variable in $_SESSION
+      array next to user variavle(array)*/
+    $_SESSION['table'] = 'users';
+    /*This will connect to the span element on user*/
+    $user = $_SESSION['user'];
+    $users = include('database/show-users.php');
+    //Use this to test if show-users.php works
+    //var_dump($users);
+    //die
+
+
+?>
+
+<!--[==============THIS IS USER-ADD.PHP=================]--> 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard - Inventory Management System</title>
+        <!--The time() after css/login.css is to make sure everytime we refreash we always load the new updated file, its the hard refresh solution I think-->
+        <link rel="stylesheet" type="text/css" href="css/login.css?v=<?= time(); ?>">
+        <link rel="stylesheet" href="css/font-awesome-4/css/font-awesome.min.css">     
+        <!--<script src="https://kit.fontawesome.com/9b6ef7dac1.js" crossorigin="anonymous"></script> There's an error on browser console when we use this-->
+        <!--Below, first one is related to CSS and second one is related to js-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.min.css" integrity="sha512-PvZCtvQ6xGBLWHcXnyHD67NTP+a+bNrToMsIdX/NUqhw+npjLDhlMZ/PhSHZN4s9NdmuumcxKHQqbHlGVqc8ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    <body>
+        <div id="dashboardMainContainer">
+            <!--This include will run and place here that html code from that php file-->
+            <!--if something wen't wrong there's a high chance its just directory problem-->
+            <?php include('partials/app-sidebar.php') ?>
+            <div class="dashboard_content_container" id="dashboard_content_container">
+                <!--The elements might be separated but remember the
+                    CSS is the one setting how they look-->
+                <?php include('partials/app-topnav.php') ?>
+                <div class="dashboard_content">
+                    <div class="dashboard_content_main">
+                        <div class="row">
+                            <div class="column column-5">
+                                <h1 class="section_header"><i class="fa fa-plus"></i> Create User</h1>
+                                <div id="userAddFormContainer">
+                                    <form action="database/add.php" method="POST" class="appForm">
+                                        <div class="appFormInputContainer">
+                                            <!--Tips, CTRL + ARROW, CTRL SHIFT ARROW-->
+                                            <label for="first_name">First Name</label>
+                                            <input type="text" class="appFormInput" id="first_name" name="first_name"/>
+                                        </div>
+                                        <div class="appFormInputContainer">
+                                            <label for="last_name">Last Name</label>
+                                            <input type="text" class="appFormInput" id="last_name" name="last_name"/>
+                                        </div>
+                                        <div class="appFormInputContainer">
+                                            <label for="email">Email</label>
+                                            <input type="text" class="appFormInput" id="email" name="email"/>
+                                        </div>
+                                        <div class="appFormInputContainer">
+                                            <label for="password">Password</label>
+                                            <input type="password" class="appFormInput" id="password" name="password"/>
+                                        </div>
+
+                                        <!--Code below something about processing, maybe just to show it works-->
+                                        <!--<input type="hidden" name="table" value="users" />-->
+                                        <button type="submit" class="appBtn"><i class="fa fa-plus"></i> Add User</button>
+                                        <!--<input type="submit" value="Submit">-->
+                                    </form>
+                                    <!--Understand the logic behind this tomorrow, lmao I'm spent-->
+                                    <?php
+                                        if(isset($_SESSION['response'])){
+                                            //either way, which one runs if or catch, this will run because there will be data inserted either way
+                                            //the first [response] is an array, the second [message] is data from that array
+                                            $response_message = $_SESSION['response']['message'];
+                                            //catch will run if theres error so [success] here has content false
+                                            //$is_success will store the ['success'] array value 
+                                            $is_success = $_SESSION['response']['success'];
+                                            //so both 
+                                    ?>
+                                        <div class="responseMessage">
+                                            <!--Below determines if its true or false, and what the message or color will be-->
+                                            <!--<a class="c1 c2">aa</a> so you can place multiple classes in one class attribute-->
+                                            <!--the just a wild guess but maybe the ? : expression goes here a command to determine which class will be placed-->
+                                            <!--$str = "TEST". ($bar ? 'true' : 'false') ."TEST"; expression example, so if whats
+                                                $is_success is true then left will be run and if inside is false, right will be run inside-->
+                                            <p class="responseMessage <?= $is_success ? 'responseMessage_success' : 'responseMessage_error' ?>">
+                                                <?= $response_message ?>
+                                            </p>
+                                        </div>
+                                    <?php unset($_SESSION['response']); } ?>
+                                </div>
+                            </div>
+                            <div class="column column-7">
+                                <h1 class="section_header"><i class="fa fa-list"></i> List of Users</h1>
+                                <div class="section_content">
+                                    <div class="users">
+                                        <!--Below it doesn't matter if array is from 0 to up, it will count it normally-->
+                                        <p class="userCount"><?= count($users) ?> Users</p>
+                                        <table>
+                                            <!--<thead></thead>-->
+                                            <!--Also the logo on sidebar changes/changed because we changed source of icons-->
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Email</th>
+                                                    <th>Created At</th>
+                                                    <th>Updated At</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!--Also on id we don't use the real id in database-->
+                                                <!--Notice how $index is set and respond-->
+                                                <!--foreach will pull.take out and run for each array inside ($users) ?-->
+                                                <!--as and $variable (you pick a name) is a must-->
+                                                <?php foreach($users as $index => $user){ ?>
+                                                    <tr>
+                                                        <!--Remember PDO::_ASSOC set it to array so users
+                                                            an array turned as index an array here, in one instance
+                                                            here we make index + 1 cause first array inside is set to 0, it just
+                                                            correspond to array in $users. then index which holds from 0 to whatever
+                                                            array value there is will be what $user draws from. So if $index in this
+                                                            iteration of foreach is now 7, $user will draw from data or row column data
+                                                            from that array made in $users/$index-->
+                                                        <td><?= $index + 1 ?></td>
+                                                        <td class="firstName"><?= $user['first_name'] ?></td>
+                                                        <td class="lastName"><?= $user['last_name'] ?></td>
+                                                        <td class="email"><?= $user['email'] ?></td>
+                                                        <!--so the F d,y correspond to month, day, year, might be a parameter-->
+                                                        <td><?= date('M d,Y @ h:i:s A', strtotime($user['created_at'])) ?></td>
+                                                        <td><?= date('M d,Y @ h:i:s A', strtotime($user['updated_at'])) ?></td>
+                                                        <!--Below code are variations-->
+                                                        <!--<td><?= date('F d,Y @ H:i:s A', strtotime($user['updated_at'])) ?></td>-->
+                                                        <!--Below code is removed cause its hard to read-->
+                                                        <!--<td><?= $user['created_at'] ?></td>-->
+                                                        <!--<td><?= $user['updated_at'] ?></td>-->
+                                                        <td>
+                                                            <a href="" class="updateUser" data-userid="<?= $user['id'] ?>"><i class="fa fa-pencil"></i> Edit</a>
+                                                            <!-- the $user['id'] will pull out the user corelating to this row, foreach. data-name="" can be changed to any name-->
+                                                            <a href="" class="deleteUser" data-userid="<?= $user['id'] ?>" data-fname="<?= $user['first_name'] ?>" data-lname="<?= $user['last_name'] ?>"><i class="fa fa-trash"></i> Delete</a>
+                                                        </td>
+                                                    </tr>
+                                                <?php } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>         
+                            </div>
+                        </div>
+                    </div>                           
+                </div>
+            </div>
+        </div>
+        <!--You can fold a sequence or block of code then copy it easily-->
+        <!--JS codes were once here, but then they got separated too, and
+            were using src="" attribute to link it-->
+    <script src="js/script.js?v=<?= time(); ?>"></script>
+    <script src="js/jquery/jquery-3.7.1.min.js"></script>
+
+    <!--Study how all this scripts and linking corelates-->
+
+    <!-- Latest compiled and minified CSS @-->
+    <!-- This link below is causing the font inside table to go bold/thicker change it to helvitica
+         It apparently also influencing dahsboard user add on sidebar ims dahyun kim and log out.
+         It also affected some of the tutorial guys elements. We found the solution out by using
+         the inspect and searching which element and which stlye from which css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--For now I'll leave out the line of code above, its also off setting the forms.
+        So apparently, this css coresspond with some of its functions. So we can't leave this out.
+        Just go ahead and manually set some of the styling/css/elemnent it affected -->
+
+    <!-- Optional theme @-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+                                        <!--Adding these three lines with @ will help remove error on console-->
+    <!-- Latest compiled and minified JavaScript @--><!--More specifically this line below removes the error-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.js" integrity="sha512-AZ+KX5NScHcQKWBfRXlCtb+ckjKYLO1i10faHLPXtGacz34rhXU8KM4t77XXG/Oy9961AeLqB/5o0KTJfy2WiA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Just copy the bootstrap3 links from website -->
+
+    <script>
+        function script(){
+            //Note that ajax() function is from jquery
+            //this below runs this.registerEvents = function()
+            this.initialize = function(){
+                this.registerEvents();
+            },
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(e){
+                    //This below line will prevent anchor refresh
+                    //but it will also prevent you from clicking and going to dashboard at navbar
+                    //e.preventDefault(); so we place this inside if
+                    //this below finds or gets all classes, so classList
+                    targetElement = e.target;
+                    classList = targetElement.classList;
+                    //classList = e.target.classList;
+
+                    //this below will show found if user clicks delete anchor
+                    //this function method finds deleteUser, among a list of classes
+                    if(classList.contains('deleteUser')){
+                        e.preventDefault();
+                        //dataset gets the userid which was set in the anchor
+                        userId = targetElement.dataset.userid;
+                        fname = targetElement.dataset.fname;
+                        lname = targetElement.dataset.lname;
+                        fullName = fname + ' ' + lname;
+                        
+                        /*This below code was the New way of informing which also has no cancel for delete for some reason, so I'll use the old code*/
+                        /*
+                        BootstrapDialog.confirm({
+                            type: BootstrapDialog.TYPE_DANGER,
+                            message: 'Are you sure about deleting '+ fullName +'?',
+                            callback: function(isDelete){                          
+                                $.ajax({
+                                    method: 'POST',
+                                    //user_id correlates to one in delete-user.php
+                                    data: {
+                                        user_id: userId,
+                                        f_name: fname,
+                                        l_name: lname
+                                    },
+                                    url: 'database/delete-user.php',
+                                    //Set data type to json so we can easily parse, process the response
+                                    dataType: 'json',
+                                    success: function(data){
+                                        //Probably means if data success is true or has value true
+                                        if(data.success){
+                                                BootstrapDialog.alert({
+                                                    type: BootstrapDialog.TYPE_SUCCESS,
+                                                    message: data.message,
+                                                    callback: function(){
+                                                        location.reload()
+                                                    }
+                                                });
+                                                //We're still in javascript so, learn about objects and methods like location and reload here below
+                                                //if(window.alert(data.message)){ window.alert couldn't refresh like window.confirm could
+                                                //if(window.confirm(data.message)){
+                                                //    location.reload();
+                                                
+                                        } else 
+                                            BootstrapDialog.alert({
+                                                type: BootstrapDialog.TYPE_DANGER,
+                                                message: data.message,
+                                            });
+                                        //[==Unused code
+                                        //} else {
+                                        //    window.alert(data.message)
+                                        //}
+                                        //==]
+                                    } else {
+                                        window.alert('Won'+ "'" +'t delete');
+                                        //console.log('Won'+ "'" +'t Delete')
+                                    }
+                                    
+                                })
+                            }
+                        })
+                        */
+
+                        //Remember to always check your spelling or pronuncation
+                        //window = object, confirm = method/function atleast at javascript pov
+                        //Oh yeah, we're on script right now, concatinate too is here
+                        //You can see the result of ajax in Inspect > Network > Request > Form data
+                        
+                        //Learn what ajax and json exactly are and how they work exactly
+                        // This was the old way of informing, which was just the browser notifying
+                        if(window.confirm('Are you sure about deleting '+ fullName +'?')){
+                            $.ajax({
+                                method: 'POST',
+                                //user_id correlates to one in delete-user.php
+                                data: {
+                                    user_id: userId,
+                                    f_name: fname,
+                                    l_name: lname
+                                },
+                                url: 'database/delete-user.php',
+                                //Set data type to json so we can easily parse, process the response
+                                dataType: 'json',
+                                success: function(data){
+                                    //Probably means if data success is true or has value true
+                                    if(data.success){
+                                        //We're still in javascript so, learn about objects and methods like location and reload here below
+                                        //if(window.alert(data.message)){ window.alert couldn't refresh like window.confirm could
+                                        if(window.confirm(data.message)){
+                                            location.reload();
+                                        }
+                                    } else window.alert(data.message);
+                                    //[==Unused Code
+                                    //} else {
+                                    //    window.alert(data.message)
+                                    //}
+                                    //==]
+                                }
+                            })
+                        } else {
+                            window.alert('Won'+ "'" +'t delete');
+                            //console.log('Won'+ "'" +'t Delete')
+                        }
+
+
+                        //This is the end of the line block code
+
+                        //Where/what does user_id correlate to the one in delete-user.php
+                        //console.log(userId, fname, lname);
+                        //This below will show particulars in console
+                        //fname = targetElement.dataset.fname;
+                        //console.log(fname);
+
+                        //console.log('found');
+                    }
+                    if(classList.contains('updateUser')){
+                        e.preventDefault();
+                        
+                        //Get data. It will target and get that data?
+                        //This will be inside one tr anyway so it'll target closest tr with td equal to that class, td.firstName example
+                        //.innerHTML, organizes the code
+                        firstName = targetElement.closest('tr').querySelector('td.firstName').innerHTML;
+                        lastName = targetElement.closest('tr').querySelector('td.lastName').innerHTML;
+                        email = targetElement.closest('tr').querySelector('td.email').innerHTML;
+                        userId = targetElement.dataset.userid;
+
+                        //this pulls out information related to that td next to class, shows in console
+                        //console.log(firstName, lastName, email);
+                        //Reminder inspect and webdevtool is your bestfriend 
+
+                        BootstrapDialog.confirm({
+                            title: 'Update ' + firstName + ' ' + lastName,
+                            //message: firstName + ' ' + lastName + ' ' + email
+                            //The forwards slash \ the error red thing from appearing, it passes it below I think. 
+                            //It helps pass the cover down. Remove \ on div above </form> to see
+                            //<form action="/action_page.php"> 
+                            message: '<form>\
+                                <div class="form-group">\
+                                    <label for="firstName">First Name:</label>\
+                                    <input type="text" class="form-control" id="firstName" value="'+ firstName +'">\
+                                </div>\
+                                <div class="form-group">\
+                                    <label for="lastName">Last Name:</label>\
+                                    <input type="text" class="form-control" id="lastName" value="'+ lastName +'">\
+                                </div>\
+                                <div class="form-group">\
+                                    <label for="email">Email address:</label>\
+                                    <input type="email" class="form-control" id="emailUpdate" value="'+ email +'">\
+                                </div>\
+                            </form>',
+
+                            //We changed email to emailUpdate as there are multiple email id already in page
+                            //Dont forget the comma's at the end
+                            //Make guidelines when handling various errors or bugs
+
+                            callback: function(isUpdate){ //parameter
+
+                                /* This block of code will see if this works
+                                console.log({
+                                            userId: userId,
+                                            f_name: document.getElementById('firstName').value,
+                                            l_name: document.getElementById('lastName').value,
+                                            email: document.getElementById('emailUpdate').value,
+                                });
+                                return;
+                                */
+
+                                if(isUpdate){ //If user click 'Ok' button.
+                                   // alert('Hi I'+ "'" +'m updating');
+                                   $.ajax({
+                                        method: 'POST',
+                                        //user_id correlates to one in delete-user.php
+                                        data: {
+                                            userId: userId,
+                                            f_name: document.getElementById('firstName').value,
+                                            l_name: document.getElementById('lastName').value,
+                                            email: document.getElementById('emailUpdate').value,
+                                        },
+                                        url: 'database/update-user.php',
+                                        //Set data type to json so we can easily parse, process the response
+                                        //this dataType: 'json', a little bit of a mystery how it works
+                                        dataType: 'json',
+                                        
+                                        //This update version gets message from data still check update-user.php
+                                        success: function(data){
+                                            //Probably means if data success is true or has value true
+                                            if(data.success){
+                                                BootstrapDialog.alert({
+                                                    type: BootstrapDialog.TYPE_SUCCESS,
+                                                    message: data.message,
+                                                    callback: function(){
+                                                        location.reload()
+                                                    }
+                                                });
+                                                //We're still in javascript so, learn about objects and methods like location and reload here below
+                                                //if(window.alert(data.message)){ window.alert couldn't refresh like window.confirm could
+                                                /*if(window.confirm(data.message)){
+                                                    location.reload();
+                                                }*/
+                                            } else 
+                                                BootstrapDialog.alert({
+                                                    type: BootstrapDialog.TYPE_DANGER,
+                                                    message: data.message,
+                                                });
+                                            /* Unused code
+                                            } else {
+                                                window.alert(data.message)
+                                            }
+                                            */
+                                        }
+                                    });
+                                }
+                            },
+
+                        });
+                    }
+                });
+            }
+
+        }
+
+        var script = new script;
+        script.initialize();
+    </script>   
+    </body>
+</html>
+
+/{============END OF OLD USER-ADD PAGE==================}\
+(We Separated UserView and UserAdd columns into two pages)
+
+
+{Old add.php code}
+<?php
+    /*It's ok if this and that have similar names, they are
+    separated by folders anyway. But lets change it anyways*/
+    /*Test site with vardump. this will show the input you placed var_dump($_POST)*/
+    /*Start the session*/
+    session_start();
+
+    //We'll now make this dynamic 
+    //Capture the table mappings.
+    include('table_columns.php');
+
+    //This code below will place $_SESSION['table'] to $table_name
+    //Capture the table name.
+    //$table_name = $_SESSION['table'];
+    //$columns = $table_columns_mapping[$table_name];
+
+    
+    //var_dump($columns); With this code, if you go to user-add or product-add, and you click submit button, you will see what table it grabs
+    //die;
+
+
+    //This code below will reset table or place nothing in it,
+    //if not the value it will show is user which was set in user-add.php
+    //$_SESSION['table'] = ''; dont use this, the table variable must contain users
+    //as users is the name of the table in our database, and a connection
+    
+    //This code below, so the first_name inside $_POST
+    //correlates to the name="" attribute in inputs
+    //For users data
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    //var_dump($password); see the input without encryption
+    //Password length changed to 300, as to accomodate the encrypted version of password
+    //The below code encrypts at make it hard for the password to be seen 
+    $encrypted = password_hash($password, PASSWORD_DEFAULT);
+    
+    //var_dump($_SESSION);
+    //Again with this self reading into, just let the entire video end before making conspiracies
+    //var_dump($_POST);
+    //This below code makes it so we don't stay at this php file
+    //header('location: /fullstackwebproject/PHPProjectInventoryManagementSystem/user-add.php');
+    //He reordered something in phpmyadmin in our database, he made email come before password column
+    //I guess, the order in phpmyadmin database must match the one in codes? I think?
+
+    
+    try {
+        $command = "INSERT INTO  
+                            $table_name(first_name, last_name, email, password, created_at, updated_at)
+                        VALUES
+                            ('".$first_name."','".$last_name."','".$email."','".$encrypted."', NOW(), NOW())";
+        //note dont place single quote on NOW()
+
+        include('connection.php');
+        //Command like how we would have typed it in phpmyadmin
+        //exec is probably a method or function inside PDO which is in $conn
+        $conn->exec($command); 
+
+        //The below dots probably connect them like in javascript
+
+        $response = [
+            'success' => true,
+            'message' => $first_name . ' ' . $last_name . ' succesfully added to the system'
+        ];
+        //The PDOException makes it so we get a proper error message, getMessage is from $e which probably a parameter
+    } catch (PDOException $e){
+        $response = [
+            'success' => false,
+            'message' => $e->getMessage()
+        ];
+    }
+    
+    //This sets another variable with value in $_SESSION
+    $_SESSION['response'] = $response;
+    header('location: ../user-add.php');
+
+    //Also we have to decrypt password when logging in
+    //Storing it in quote is a must
+    // Now we'll be Adding Record
+    //include('connection.php');
+    
+    /*var_dump($conn); test and see if it works with this
+     die;*/
+
+    /*
+    $_POST
+
+    (PHP 4 >= 4.1.0, PHP 5, PHP 7, PHP 8)
+
+    $_POST — HTTP POST variables
+
+    An associative array of variables passed to the current
+    script via the HTTP POST method when using application/x-www-form-urlencoded
+    or multipart/form-data as the HTTP Content-Type in the request. 
+    */
+?>
+{Old add.php code}

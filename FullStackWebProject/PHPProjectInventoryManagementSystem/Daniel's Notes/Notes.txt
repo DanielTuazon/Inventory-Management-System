@@ -1,0 +1,4640 @@
+Back Up
+
+PHP Project Inventory Management System using 
+HTML CSS JavaScript jQuery PHP MySQL - Source Code
+
+
+
+
+[Introduction Zero 1:]
+
+We'll see how to connect website to dbms
+HTML CSS JavaScript jQuery PHP MySQL will be used
+Learn to code and create the home page and system
+and all other stuff, and to expert mysql data to pdf
+and then how to export our data to microsoft excel file
+file then integrate a video there then styled
+buttons near footer
+
+Semantic Elements in HTML
+Many web sites contain HTML code like: <div id="nav">
+ <div class="header"> <div id="footer"> to indicate
+ navigation, header, and footer.
+
+In HTML there are some semantic elements that can be
+used to define different parts of a web page:  
+
+    <article>
+    <aside>
+    <details>
+    <figcaption>
+    <figure>
+    <footer>
+    <header>
+    <main>
+    <mark>
+    <nav>
+    <section>
+    <summary>
+    <time>
+
+Then learn login form in our system and functionality
+that connects our database, then the graphs inside
+and others like it.
+We have the product management module that show
+the products, and edit or update them, you know
+the UPDATE, ADD, DELETE
+You can edit supplier data
+Next tab is order and stuff like that
+Next is the iser management create user stuff
+Log out and Log in
+
+
+
+
+[Creating a Log In Form Page Using HTML, CSS and PHP 2:]
+
+Design will guide us Also make own folder for imgs
+then make html and css other files. Get an image for background
+
+Definition and Usage
+When used together with the <label> element, the for attribute
+specifies which form element a label is bound to.
+
+When used together with the <output> element, the for attribute 
+specifies the relationship between the result
+of the calculation, and the elements used in the calculation.
+
+The HTML <form> element can contain one or more
+make folders for css
+
+
+/*div.container*/
+
+/*.container{
+    display: none;
+} This will make everything inside container disappear*/
+
+
+/*.container{
+    background: url('/images/login-background.jpg') no-repeat center center fixed;
+    background-size: cover; */
+    /*background: url('../images/login-background.jpg')*/
+    /*center*/
+/* } */
+
+/*
+::after
+In CSS, ::after creates a pseudo-element that is the 
+last child of the selected element. It is often used to
+add cosmetic content to an element with the content
+property. It is inline by default. */
+
+/*.dead-link::after {
+  content: url('../../media/warning.svg');
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+
+.topic-games::after {
+  content: '🎮 ';
+}
+
+.topic-weather::before {
+  content: '⛅ ';
+}
+
+The value of said property is adjusted automatically
+according to the content or the context of the element.
+
+For example, a block-level element with height: auto
+will grow taller as it contains more text. For another
+example, a block element with margin: 0 auto will have
+the left and right margins increased until it becomes
+centered along the y-axis of the viewport.
+
+CSS introduced the ::after notation (with two colons)
+to distinguish pseudo-classes from pseudo-elements.
+For backward compatibility, browsers also accept
+:after, introduced earlier.
+It really depends on the property you give the value
+to, different properties behave differently depending
+on the content and context.
+*/
+
+/*:: = pseudo elements : = psuedo classes*/
+
+/*here use tag instead of a class*/
+
+   border: 2px solid #fff;
+/*Notice instead of sumoning other properties
+    their values are summoned here, like the solid
+    is border-width, then border-color after*/
+
+/*This property is specified as a comma-separated list of shadows.*/
+/*Look it up further as theres more into this:  color | offset-x | offset-y | blur-radius
+                                                text-shadow: #fc0 1px 0 10px;             */
+
+    /*Text Shadow simulating Text Border is my addition*/
+    /*-webkit-text-stroke: 2px #fff;*/
+    /*Read and comprehend this, look up text-shadow*/
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+            
+
+
+
+[Create Your First Website Homepage Part One 3:]
+
+A modern css reset
+https://andy-bell.co.uk/a-modern-css-reset/
+Reset style sheet
+A reset stylesheet is a collection of CSS rules used
+to clear the browser's default formatting of HTML
+elements, removing potential inconsistencies between
+different browsers. It also prevents developers from
+unknowingly relying on the browser default styling and
+force them to be explicit about the styling they want to
+apply on the page
+
+https://fontawesome.com/start
+email:danieltuazon222@gmail.com
+pass:greekmythology
+you can find icons there and grab their code using
+anchor (a) as a medium 
+
+Font Awesome is the Internet's icon library and toolkit,
+used by millions of designers, developers, and content
+creators. (Remember JQUERY is a external library)
+
+all
+
+The all shorthand CSS property resets all of an
+element's properties except unicode-bidi, direction,
+and CSS Custom Properties. It can set properties to
+their initial or inherited values, or to the values
+specified in another cascade layer or stylesheet origin.
+
+https://www.impressivewebs.com/css3-transition-all/
+
+ transition: all 1s ease-in;
+
+
+
+
+[Create Your First Website Homepage Part Two 4:]
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+
+So position relative, I get it now
+With this the normal position is where its standing
+and it moves away from it to go to right if right is set
+or it goes the other way around, so it moves away from
+where its normally positioned.
+
+So lets say if it was in a div or something:
+It will move inside that div and relative to that
+div, so where it's position in that div, it moves
+from there. Still confusing but i think it sounds right
+
+<p>An element with position: relative; is positioned relative to its normal position:</p>
+
+<div class="relative">
+This div element has position: relative;
+</div>
+
+
+An element with position: relative; is positioned relative
+to its normal position.
+
+Setting the top, right, bottom, and left properties of a
+relatively-positioned element will cause it to be adjusted
+away from its normal position. Other content will not be
+adjusted to fit into any gap left by the element. 
+
+
+So here's the logic behint postion: relative
+if its inside a div exactly it will include it will work
+or move relative to the div, so it becomes part of div
+Still not sure though, yeah...
+
+Also, the body element has its own padding, so I tested it
+The padding of body will be ignored by an element like p
+that has a styling position: relative. So no padding
+
+While the terms GPU and graphics card (or video card) are 
+often used interchangeably, there is a subtle distinction 
+between these terms. Much like a motherboard contains a CPU,
+a graphics card refers to an add-in board that incorporates
+the GPU.
+
+/*
+[offset-x | offset-y | blur-radius | color]
+text-shadow: 1px 1px 2px black;
+
+[color | offset-x | offset-y | blur-radius]
+text-shadow: #fc0 1px 0 10px;
+
+[offset-x | offset-y | color]
+text-shadow: 5px 5px #558abb;
+
+[color | offset-x | offset-y]
+text-shadow: white 2px 5px;
+
+[offset-x | offset-y]
+Use defaults for color and blur-radius
+text-shadow: 5px 10px;
+
+[Global values]
+text-shadow: inherit;
+text-shadow: initial;
+text-shadow: revert;
+text-shadow: revert-layer;
+text-shadow: unset;
+*/
+
+Remember in coding like this the coloring is not important
+aslong as its correct, because the colors are just ide
+simplification the browser will be the one to read and run that
+
+ctrl + left arrow or right arrow to immidiately move
+ctrl + f to use finder
+
+look up CSS combinators
+
+> is the child combinator, sometimes mistakenly called the
+direct descendant combinator.1
+
+That means the selector div > p.some_class only matches
+paragraphs of .some_class that are nested directly inside a
+div, and not any paragraphs that are nested further within.
+This implies that every element matching div > p.some_class
+necessarily also matches div p.some_class, with the descendant
+combinator (space), so the two are understandably often confused.
+
+[=========================================================]
+You know, you can just make a documentation format like this:
+Take the keywords worth noting and everything close to that,
+Place it at top, then use ctrl + find to find the documentation
+of it here, even go and make a special code for it and match it.
+Then along with the explanation or documentation add a code that
+perfectly encapsulates or conveys how it work. Here's a look:
+
+CSS Selectors = @#154321
+Div Element = @#563231
+CSS combinators = @#756331
+auto value = @#485674
+
+@#485674 :
+BLASDIUAHUADUSHANSCKXHINASUDGACS
+
+@#756331 :
+BLASDIUAHUADUSHANSCKXHINASUDGACS
+
+So basically its like a quick access or search protocol.
+You can even go further and organize it by relation.
+CSS property keywords next to each other and HTML Element
+Tag keywords next to each other, and everything else.
+[=========================================================]
+
+Also you can make and design website layouts in Photoshop
+
+Also study webpage size as it matters when designing
+Screen size. Broom broom also webpage natural size is 1080p
+
+
+
+[Create An Admin Dashboard Sidebar Menu 5:]
+100% can be 100% of the height of anything. For example, 
+if I have a parent div that's 1000px tall, and a child div
+that is at 100% height, then that child div could
+theoretically be much taller than the height of the
+viewport, or much smaller than the height of the viewport,
+even though that div is set at 100% height.
+
+If I instead make that child div set at 100vh, then
+it'll only fill up 100% of the height of the viewport,
+and not necessarily the parent div.
+
+Create a Clickable Dropdown
+
+Create a dropdown menu that appears when the user clicks on a button.
+Step 1) Add HTML:
+ <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div> 
+
+Example Explained
+
+Use any element to open the dropdown menu, e.g. a <button>, <a> or <p> element.
+
+Use a container element (like <div>) to create the dropdown menu and add the dropdown links inside it.
+
+Wrap a <div> element around the button and the <div> to position the dropdown menu correctly with CSS.
+
+Step 2) Add CSS:
+
+ /* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+
+Example Explained
+
+We have styled the dropdown button with a background-color, padding, hover effect, etc.
+
+The .dropdown class uses position:relative, which is needed when we want the dropdown content to be placed right below the dropdown button (using position:absolute).
+
+The .dropdown-content class holds the actual dropdown menu. It is hidden by default, and will be displayed on hover (see below). Note the min-width is set to 160px. Feel free to change this. Tip: If you want the width of the dropdown content to be as wide as the dropdown button, set the width to 100% (and overflow:auto to enable scroll on small screens).
+
+Instead of using a border, we have used the box-shadow property to make the dropdown menu look like a "card". We also use z-index to place the dropdown in front of other elements.
+
+Step 3) Add JavaScript:
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+
+Right-aligned dropdown
+
+Aligned Dropdown Content
+
+Use float: right on the dropdown class to float the dropdown menu to the right, and right:0 on the dropdown-content if you want the dropdown content to go from right to left.
+
+AND MORE DROPDOWNS IN https://www.w3schools.com/howto/howto_js_dropdown.asp
+
+Below Could Be Helpful:
+https://www.javatpoint.com/how-to-remove-bullet-points-in-css
+
+
+
+
+
+[Create A Login Logout System Using Sessions 6:]
+We, will work with the database here:
+Remember that to use local host or server place
+the code files in htdocs inside xampp folder
+to look it up do localhost/then here the name
+
+XAMPP PHP installation
+
+To make your html files work with sql and php, turn it into .php files when in htdocs
+
+From here on out, do exactly what is asked of you, and don't add any more!
+That problem with the background: url was a pain in the fuckin ass
+
+The tutorial guy has two xampp apps/folder? what?
+
+Here is all you need to know about relative file paths:
+
+Starting with “/” returns to the root directory and starts there
+Starting with “../” moves one directory backwards and starts there
+Starting with “../../” moves two directories backwards and starts there (and so on…)
+To move forward, just start with the first subdirectory and keep moving forward
+
+With php and editing it, or when using server, xampp and stuff
+
+Do Ctrl + F5 as a real refresh to truly refresh
+Or in our limited keyboard's case, do Ctrl + Fn + F5
+Probably because of cache and stuff
+https://stackoverflow.com/questions/12683417/localhost-wont-immediately-update
+Either this or move to WAMP
+
+We want the homepage.php to be the first page to go in
+So the xampp of server/web will first look for that if you
+make homepage.php into index.php, which we'll do right now
+
+And then all you need to do now is open the folder and it will
+open that first, without adding /homepage.php or /index.php there
+
+With programming keep attention to the locations
+Location of folders and files
+The location the codes are pointing to
+Which file the code is pointing at
+Keep mind of extension, servers, local and others
+
+So if you turned the files from html to php,
+Find the anchors and change the links its pointing at
+
+xampp acts like a server in our local machine
+So whats a database?
+You can access our database inside this software
+helps us access and manage our database
+Do this localhost/phpmyadmin/
+
+Create inventory database in new
+in inventory database you can create a table
+which is basically a storage, so our related data can store there
+its rows and columns looks like in database, inside are database
+So users table
+properties of our users table
+First name column last name column and password column and email column
+below the column are datas and rowed 
+so thats database table stuff whatever you know this read your notebooks
+Add column created-at and updated-at at the very editing
+
+on create table place the users name and then pick seven on numbers of columns
+D:\CODING\Coding Practice\PHP Project Inventory Management System Old Version\screenshots for clarification\SettingUpTable.PNG
+
+A_I is auto increment for unique id act
+as unique identifier (in relation to our goal)
+
+varchar is a string, 50 is our maximum characters
+there's char and varchar in sql, go find out the difference online
+
+table structure button to check structure.
+Click the users table so you can find the insert tab on top
+there you can insert manually without php or webpage
+Leave id value alone as it has auto increment
+you can set the date time to or just use auto value it has
+once you're done, hit go on lower right corner
+
+Now go to browse tab, now we have one record
+So next is go to login.php or page and lets use some PHP! Woo lets go!
+Alright now lets put php code at the very top of the login code file
+
+TechSmith Snagit Recorder was the screen recording software he uses
+
+
+
+The double arrow operator, =>, is used as an access mechanism for
+arrays. This means that what is on the left side of it will have a
+corresponding value of what is on the right side of it in array
+context. This can be used to set values of any acceptable type into
+a corresponding index of an array. The index can be associative
+(string based) or numeric.
+
+$myArray = array(
+    0 => 'Big',
+    1 => 'Small',
+    2 => 'Up',
+    3 => 'Down'
+);
+
+The object operator, ->, is used in object scope to access methods
+and properties of an object. It’s meaning is to say that what is on
+the right of the operator is a member of the object instantiated into
+the variable on the left side of the operator. Instantiated is the
+key term here.
+
+// Create a new instance of MyObject into $obj
+$obj = new MyObject();
+// Set a property in the $obj object called thisProperty
+$obj->thisProperty = 'Fred';
+// Call a method of the $obj object named getProperty
+$obj->getProperty();
+
+
+
+=> is used in associative array key value assignment. Take a look at:
+
+http://php.net/manual/en/language.types.array.php.
+
+-> is used to access an object method or property. Example: $obj->method().
+
+When the left part is an object instance, you use ->. Otherwise, you use ::.
+
+This means that -> is mostly used to access instance members (though it can also be used to access static members, such usage is discouraged), while :: is usually used to access static members (though in a few special cases, it's used to access instance members).
+
+In general, :: is used for scope resolution, and it may have either a class name, parent, self, or (in PHP 5.3) static to its left. parent refers to the scope of the superclass of the class where it's used; self refers to the scope of the class where it's used; static refers to the "called scope" (see late static bindings).
+
+The rule is that a call with :: is an instance call if and only if:
+
+    the target method is not declared as static and
+    there is a compatible object context at the time of the call, meaning these must be true:
+        the call is made from a context where $this exists and
+        the class of $this is either the class of the method being called or a subclass of it.
+
+https://stackoverflow.com/questions/3173501/whats-the-difference-between-double-colon-and-arrow-in-php
+https://www.php.net/manual/en/class.pdostatement.php
+https://www.sitepoint.com/re-introducing-pdo-the-right-way-to-access-databases-in-php/
+
+We learned how to log in also with help of Sessions
+now is how to Logout
+And that is to delete or destroy all the session variables
+PHP's PDO is indeed a library
+
+Also with inspect or devtool
+Atleast in chrome at At middle navbar on style
+you can fully style it in there. The plus button on bottom right side
+can make CSS specificators, the line is also told and which file in the top right corner
+really just useful stuff for testing.
+You can also see which inherited which ther on top of them
+
+
+[Create User Registration Form Insert Data into MySQL Database 7:]
+created_at automatically updates
+
+result of $_session
+
+https://www.php.net/manual/en/language.operators.php
+
+So this array is from $_SESSION[] this came from add.php when we use var_dump($_SESSION);
+  The two in parenthesis is the number of correspond with the one its attached to
+
+The "user" was set on login.php and forwards. "table" was set on user-add.php forwards
+array(2) {
+  ["user"]=> array(7) { ["id"]=> string(1) "2" ["first_name"]=> string(6) "Dahyun" ["last_name"]=> string(3) "Kim" ["password"]=> string(6) "dahyun" ["email"]=> string(17) "kimdahyun@ims.com" ["created_at"]=> string(19) "2023-11-19 19:54:35" ["updated_at"]=> string(19) "2023-11-19 19:54:35" } 
+  ["table"]=> string(5) "users"}
+
+This array and its data are set by the form input
+array(4) { 
+  ["first_name"]=> string(6) "asdasd" ["last_name"]=> string(6) "asdasd" ["email"]=> string(6) "asdasd" ["password"]=> string(6) "asdasd" } 
+
+
+
+
+
+
+
+
+[How To Fetch Data from MySQL Database and Display in HTML Table using PHP PDO 8:]
+
+
+
+https://stackoverflow.com/questions/14037290/what-does-this-mean-in-php-or
+
+The double arrow operator, =>, is used as an access mechanism for arrays. This means that what is on the left side of it will have a corresponding value of what is on the right side of it in array context. This can be used to set values of any acceptable type into a corresponding index of an array. The index can be associative (string based) or numeric.
+
+$myArray = array(
+    0 => 'Big',
+    1 => 'Small',
+    2 => 'Up',
+    3 => 'Down'
+);
+
+The object operator, ->, is used in object scope to access methods and properties of an object. It’s meaning is to say that what is on the right of the operator is a member of the object instantiated into the variable on the left side of the operator. Instantiated is the key term here.
+
+// Create a new instance of MyObject into $obj
+$obj = new MyObject();
+// Set a property in the $obj object called thisProperty
+$obj->thisProperty = 'Fred';
+// Call a method of the $obj object named getProperty
+$obj->getProperty();
+
+
+Let's take an example:
+
+foreach ($array as $value) {}
+
+This means
+
+    foreach element (of $array) defined as $value...
+
+In other words this means that the elements of the array will be retrieved inside the loop as $value. Notice that you can specify also this syntax:
+
+foreach ($array as $key => $value) {}
+
+In both ways the vars $key and $value will exists inside the foreach and will correspond to the 'current' element of the array.
+
+
+foreach ¶
+
+(PHP 4, PHP 5, PHP 7, PHP 8)
+
+The foreach construct provides an easy way to iterate over arrays. foreach works only on arrays and objects, and will issue an error when you
+try to use it on a variable with a different data type or an uninitialized variable. There are two syntaxes: 
+
+https://www.w3schools.com/php/php_looping_foreach.asp
+
+PHP foreach Loop
+
+The foreach loop - Loops through a block of code for each element in an array.
+The PHP foreach Loop
+
+The foreach loop works only on arrays, and is used to loop through each key/value pair in an array.
+
+https://www.phptutorial.net/php-oop/php-try-catch/
+
+https://www.php.net/manual/en/language.exceptions.php
+
+
+
+
+[How To Delete Data from MySQL Database with AJAX jQuery JavaScript PHP BootstrapDialog 9:]
+
+This below code makes it so when you click at anypart of the page
+a hi will be produced in console
+
+<script>
+        function script(){
+
+            this.initialize = function(){
+                this.registerEvents();
+            }
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(){
+                    console.log("hi");
+                });
+            }
+
+        }
+
+        var script = new script;
+        script.initialize();
+    </script>   
+
+This below block of code will show the event data.
+You know, you can just check the objects classes and method, functions
+and the multiple parameters inside them in documentation
+
+<script>
+        function script(){
+
+            this.initialize = function(){
+                this.registerEvents();
+            }
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(e){
+                    console.log(e);
+                });
+            }
+
+        }
+
+        var script = new script;
+        script.initialize();
+    </script>   
+
+Below code you'll see something in console
+
+function script(){
+
+            this.initialize = function(){
+                this.registerEvents();
+            }
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(e){
+                    classList = e.target.classList;
+                    console.log(classList);
+                });
+            }
+
+        }
+
+        var script = new script;
+        script.initialize();
+
+https://www.w3schools.com/jsref/obj_window.asp
+
+
+if(window.confirm('Are you sure to delete? '+ fullName +'?')){
+    console.log('Will delete');
+} else {
+    window.alert('Won'+ "'" +'t delete');
+    console.log('Won'+ "'" +'t Delete')
+}
+
+
+
+
+
+[How To Update Data in MySQL Database using AJAX/JQuery/JavaScript PHP BootstrapDialog 10:]
+
+First, realize that AJAX is a concept, not a specific technology or API. Second, look at what
+AJAX stands for: Asynchronous JavaScript And XML. The asynchronous part has never been lost.
+If anything, it's grown and now we have things like promises and async/await.
+
+People moved away from XML (and to JSON). In the past, you would have used XMLHttpRequest
+to make a server request. Now, most people now just use fetch and return JSON from the server.
+
+Time to use Bootstrap's modal monkey-friendly
+Bootstrap3-dialog > copy link tag
+
+Bootstrap 3.3.7 CDN:
+https://blog.getbootstrap.com/2016/07/25/bootstrap-3-3-7-released/
+
+Overview:
+https://nakupanda.github.io/bootstrap3-dialog/
+
+Download Here:
+https://cdnjs.com/libraries/bootstrap3-dialog
+[3rd on the line in downloads]
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.min.css" integrity="sha512-PvZCtvQ6xGBLWHcXnyHD67NTP+a+bNrToMsIdX/NUqhw+npjLDhlMZ/PhSHZN4s9NdmuumcxKHQqbHlGVqc8ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+[1st on the line in downloads]
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.js" integrity="sha512-AZ+KX5NScHcQKWBfRXlCtb+ckjKYLO1i10faHLPXtGacz34rhXU8KM4t77XXG/Oy9961AeLqB/5o0KTJfy2WiA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+Remember that the tutorial guy and you use different ide, browser, and the time difference make
+some of his points obsolete, so keep that in mind.
+
+This below pops up, even though he didn't get it, because the tutorial was years ago
+[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) <input type=​"password" class=​"appFormInput" id=​"password" name=​"password">​
+
+
+Also firefox doesn't outright show what it got, but google does with this in regard:
+if(classList.contains('updateUser')){
+    e.preventDefault();
+    
+    //Get data. It will target and get that data?
+    //This will be inside one tr anyway so it'll target closest tr with td equal to that class, td.firstName example
+    firstName = targetElement.closest('tr').querySelector('td.firstName');
+    lastName = targetElement.closest('tr').querySelector('td.lastName');
+    email = targetElement.closest('tr').querySelector('td.email');
+    
+    //this pulls out information related to that td next to class
+    console.log(firstName, lastName, email);
+}
+
+
+Results in Chrome:
+<td class="firstName"> 
+<td class="lastName"> 
+<td class="email">
+
+
+Results in firefox:
+<td class="firstName">Chaeyoung</td>
+<td class="lastName">Son</td>
+<td class="email">sonchaeyoung@gmail.com</td>
+
+https://css-tricks.com/almanac/properties/t/text-overflow/
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text
+
+https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/
+
+
+
+
+
+
+
+
+[Entity Relationship Diagram (ERD) | Create Tables Using MySQL Command in phpMyAdmin 11:]
+At the moment only have one database table
+ERD is A
+type of structural deiagram for use in databases design.
+import tables and stuff before that we design entity relation program
+
+it contains different symbols and connectors that visualize two important information: the major
+entities within the system scope, and the inter-relationships among these entities.
+
+data entities
+check the notebook for sql
+ER Diagrams in notebook SQL:
+
+Go use lucid.app web for designing database if you want
+
+Products table:
+
+column        values
+id            PK
+product_name  String
+created_by    FK
+created_at    DateTime
+updated_at    DateTime
+
+ERD or Entity RelationShip Diagram are like Work FLows in programmings
+
+
+inputing manually in sql
+mayasql query
+
+In SQL we made a relation
+check products table we have primary and an index
+gold key primary the id
+silver key index the created_by
+
+check structure > relation view of products table
+index is then connected with id from table users
+
+in workflow thing lucid, you can change column of logos
+in relation to if they are completed or done with green color
+
+In, foreign key constraint creation page
+just look at the layout and you can imagine what it does
+
+You can check SQL documentation.
+Also it's possible to make a table by making commands
+using PHP AND PDO 
+
+The foreign key inside supplier relates to the id
+in users table
+
+We'll now use mySQL query instead
+and make simple query to make a table
+Go at SQL tab inside of database
+
+You can manually add a column in phpmyadmin
+just below the structure.
+
+You can leave constraint text Input box with nothing
+it can make its own name automatically
+
+Index key = Foreign key
+
+So four new tables in total have been added.
+
+/*Also note that time from database is different from our time in philippines*/
+
+
+
+
+
+
+
+[How To Create Multi Level Drop down Navigation Menu using CSS HTML JS - PART ONE 12:]
+ 
+
+ 
+ /*!important prioritizes this, cause theres hierchy or order of prioritation*/
+    padding-left: 25px !important;
+  
+a.subMenuLink{
+    /*!important prioritizes this, cause theres hierchy or */
+    padding-left: 25px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    text-transform: none;
+    
+}
+
+CSS The !important Rule
+What is !important?
+
+The !important rule in CSS is used to add more importance to a property/value than normal.
+
+In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+
+Let us look at an example:
+Example
+#myid {
+  background-color: blue;
+}
+
+.myclass {
+  background-color: gray;
+}
+
+p {
+  background-color: red !important;
+}
+
+Example Explained
+
+In the example above. all three paragraphs will get a red background color,
+even though the ID selector and the class selector have a higher specificity.
+ The !important rule overrides the background-color property in both cases.
+
+
+ul.subMenus{
+    /*This removes the dropdown bullet point signs*/
+    list-style-type: none;
+    background: #c26a80;
+    /*Had to add below this cause submenu has gap without this*/
+    margin-left: -40px;
+    /*This property below will make this part disappear,
+      you can't even find it with inspect webdevtool*/
+    display: none;
+}
+
+/*You can see the elements in left side of webdevtool
+  hover over it and youll see which covers which, usefu*/
+
+/*This is the element it targets*/
+/*<i class="fa fa-angle-up mainMenuIconArrow"></i>*/
+i.mainMenuIconArrow{
+    /*This causes the icon to go right*/
+    float: right;
+    margin-top: 5px;
+    /*This property below was supposed to inherit from above
+      this one ul.dashboard_menu_lists li.liMainMenu a i
+      The !important cut that ties*/
+    font-size: 20px !important;
+}
+
+
+
+
+
+
+
+[How To Add Remove Active Menu Class Indicator Dynamically using JavaScript - PART TWO 13:]
+
+
+This is the old code which targets only one, we needed something dynamic so we changed it:
+            
+            
+            <!--<li class="liMainMenu showHideSubMenu" data-target="user"> old code-->
+            <li class="liMainMenu showHideSubMenu" data-submenu="user">
+                <!--javascript:void(0); this will stop the default reaction of refreshing page the below code does-->
+                <!--If we only place showHideSubMenu in a element here, there will be problems to range of clicking area, we added it to element above too-->
+                <a href="javascript:void(0);" class="liMainMenu_link showHideSubMenu" data-submenu="user">
+                    <i class="fa fa-user-plus showHideSubMenu" data-submenu="user"></i>
+                    <span class="menuText showHideSubMenu" data-submenu="user">User Management</span>
+                    <i class="fa fa-angle-left mainMenuIconArrow showHideSubMenu" data-submenu="user"></i>
+                </a>
+
+                <ul class="subMenus" id="user">
+                    <li><a class="subMenuLink" href="#"><i class="fa fa-circle-o"></i> View Users</a></li> 
+                    <li><a class="subMenuLink" href="#"><i class="fa fa-circle-o"></i> Add User</a></li>
+                </ul>
+            </li>
+
+
+
+
+
+[How To Insert Data Into MySQL Database Using PHP PDO | Adding Products To Database 14:]
+Lots of script changes and seperation in this chapter so keep your eyes peeled for changes
+
+So apparently the method to displaying or placing images in database
+is with varchar so we're probably just linking images
+
+We're going to make add.php dynamic
+
+It's better to look at proper documentation instead of just the internet people answers
+
+Woo, were done, that was confusing as hell, you got to re-read the codes to fully understandably
+
+
+
+
+
+
+[Inventory System | How To Upload Files and Images into Database using PHP $_FILES 15:]
+
+Ok next part
+Also just noticed that scroll CSS Property only works in Chrome and not firefox
+
+Click xampp > config > php
+find file_uploads
+should be set at ON value is ON
+
+
+Look up for=""  attribute again 
+The for attribute associates the label with a control element, as defined in the
+description of label in the HTML 4.01 spec. This implies, among other things,
+that when the label element receives focus (e.g. by being clicked on), it passes
+the focus on to its associated control.
+
+
+
+
+
+[How to Fetch and Display Images Dynamically in HTML Table from Database using PHP MYSQL 16:]
+
+Its ok, we need to fix images overflowing from their table place Still
+
+
+
+
+
+
+
+[How To Delete Data from MySQL Database Using jQuery AJAX PHP MYSQL BootstrapDialog 17:]
+
+
+We deleted the  show-users.php file, heres the code within it:
+
+<?php
+
+//include makes it so anything in 'connection.php' can be used here
+include('connection.php');
+
+//prepare a function/objectfunction/method from $conn from connection.php
+//which has the PDO class, inside are placed in parameters
+//we specified that it be ordered by column created_at at descending
+//below specifier of order by desc stuff sets it from newly created to oldest made
+$stmt = $conn->prepare("SELECT * FROM users ORDER BY created_at DESC");
+//Then below, the execute line executes it
+//$stmt can use PDO function because it was set equal to $conn?
+$stmt->execute();
+//This below line makes it into an array, so its organized, check on var_masterpiece
+//If Fetch::assoc is not used it will be showed as indexed in var_dump, tutorial guy said
+//Basically organizes it, if not its unorganized used var_dump to see
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+return $stmt->fetchAll();
+//Below code are for checking, like console.log
+//var_dump($stmt->fetchAll());
+//die;
+
+
+?>
+
+
+
+What I'll write here is true for jQuery events,
+For vanilla javascript events read @T.J. Crowder comment at the bottom of the answer
+
+return false inside a callback prevents the default behaviour. For example, in a submit event, it doesn't submit the form.
+
+return false also stops bubbling, so the parents of the element won't know the event occurred.
+
+return false is equivalent to event.preventDefault() + event.stopPropagation()
+
+And of course, all code that exists after the return xxx line won't be executed. (as with all programming languages I know)
+
+
+Its weird with google chrome the scroll appears, but in firefox it dashboard_menu_lists
+
+also in chrome the images doesnt overflow, but in firefox it still overflows
+
+
+This below block of code was the delete-user.php code
+<?php
+    $data = $_POST;
+
+    //Adding (int) makes the data from 'string(1) "1"' (click the post line in network) to int(1)
+    //Is it turning it back into an int? Cause data is being filtered all the time
+    $user_id = (int) $data['user_id'];
+    $first_name = $data['f_name'];
+    $last_name = $data['l_name'];
+
+    //var_dump($user_id); you left this, and this stopped the alert from working, it interfered
+
+    //We copied this setup code below from add.php. So some notes might not make sense
+    try {
+        $command = "DELETE FROM users WHERE id={$user_id}";
+        //var_dump($command);
+        //die;
+        //I don't know what int(17) string(29) correspond to
+        //int(17) string(29) "DELETE FROM users WHERE id=17" 
+
+        include('connection.php');
+        //Command like how we would have typed it in phpmyadmin
+        //exec is probably a method or function inside PDO which is in $conn
+        $conn->exec($command); 
+
+
+        //What's up with echo used on json_encode?
+        //The below dots probably connect them like in javascript, concatenation
+        //echo json_encode([
+        //return json_encode([
+        echo json_encode([
+            'success' => true,
+            'message' => $first_name . ' ' . $last_name . ' is successfully deleted.'
+        ]);
+
+        //The PDOException makes it so we get a proper error message, getMessage is from $e which probably a parameter
+    } catch (PDOException $e){
+        echo json_encode([
+            'success' => false, 
+            'message' => ' Error processing your request!'
+        ]);
+    }
+
+?>
+
+Just ignore the red text it means nothing
+
+https://www.javatpoint.com/php-operators
+
+
+
+
+
+
+
+[How To Update Product Data Record in MySQL Database Using PHP PDO JQuery Ajax 18:]
+
+
+                        BootstrapDialog.confirm({
+                            title: 'Update ' + firstName + ' ' + lastName,
+                            //message: firstName + ' ' + lastName + ' ' + email
+                            //The forwards slash \ the error red thing from appearing, it passes it below I think. 
+                            //It helps pass the cover down. Remove \ on div above </form> to see
+                            //<form action="/action_page.php"> 
+                            message: '<form>\
+                                <div class="form-group">\
+                                    <label for="firstName">First Name:</label>\
+                                    <input type="text" class="form-control" id="firstName" value="'+ firstName +'">\
+                                </div>\
+                                <div class="form-group">\
+                                    <label for="lastName">Last Name:</label>\
+                                    <input type="text" class="form-control" id="lastName" value="'+ lastName +'">\
+                                </div>\
+                                <div class="form-group">\
+                                    <label for="email">Email address:</label>\
+                                    <input type="email" class="form-control" id="emailUpdate" value="'+ email +'">\
+                                </div>\
+                            </form>',
+
+                            //We changed email to emailUpdate as there are multiple email id already in page
+                            //Dont forget the comma's at the end
+                            //Make guidelines when handling various errors or bugs
+
+                            callback: function(isUpdate){ //parameter
+
+                                /* This block of code will see if this works
+                                console.log({
+                                            userId: userId,
+                                            f_name: document.getElementById('firstName').value,
+                                            l_name: document.getElementById('lastName').value,
+                                            email: document.getElementById('emailUpdate').value,
+                                });
+                                return;
+                                */
+
+                                if(isUpdate){ //If user click 'Ok' button.
+                                   // alert('Hi I'+ "'" +'m updating');
+                                   $.ajax({
+                                        method: 'POST',
+                                        //user_id correlates to one in delete-user.php
+                                        data: {
+                                            userId: userId,
+                                            f_name: document.getElementById('firstName').value,
+                                            l_name: document.getElementById('lastName').value,
+                                            email: document.getElementById('emailUpdate').value,
+                                        },
+                                        url: 'database/update-user.php',
+                                        //Set data type to json so we can easily parse, process the response
+                                        //this dataType: 'json', a little bit of a mystery how it works
+                                        dataType: 'json',
+                                        
+                                        //This update version gets message from data still check update-user.php
+                                        success: function(data){
+                                            //Probably means if data success is true or has value true
+                                            if(data.success){
+                                                BootstrapDialog.alert({
+                                                    type: BootstrapDialog.TYPE_SUCCESS,
+                                                    message: data.message,
+                                                    callback: function(){
+                                                        location.reload()
+                                                    }
+                                                });
+                                                //We're still in javascript so, learn about objects and methods like location and reload here below
+                                                //if(window.alert(data.message)){ window.alert couldn't refresh like window.confirm could
+                                                /*if(window.confirm(data.message)){
+                                                    location.reload();
+                                                }*/
+                                            } else 
+                                                BootstrapDialog.alert({
+                                                    type: BootstrapDialog.TYPE_DANGER,
+                                                    message: data.message,
+                                                });
+                                            /* Unused code
+                                            } else {
+                                                window.alert(data.message)
+                                            }
+                                            */
+                                        }
+                                    });
+                                }
+                            },
+
+                        });
+
+
+                                message: '<form>\
+                                    <div class="form-group">\
+                                        <label for="firstName">First Name:</label>\
+                                        <input type="text" class="form-control" id="firstName" value="'+ firstName +'">\
+                                    </div>\
+                                    <div class="form-group">\
+                                        <label for="lastName">Last Name:</label>\
+                                        <input type="text" class="form-control" id="lastName" value="'+ lastName +'">\
+                                    </div>\
+                                    <div class="form-group">\
+                                        <label for="email">Email address:</label>\
+                                        <input type="email" class="form-control" id="emailUpdate" value="'+ email +'">\
+                                    </div>\
+                                </form>',
+
+            Down below block of code, you can see how those variables or parameters can be changed
+
+            this.showEditDialog = function(Mike){
+                //function(data) parameter?
+                //Understand this line below the expression
+                //So productDetails will be like a placeholder or parameter, and it can pull out the items, like product_name
+                $.get('database/get-product.php', {id: Mike}, function(Johnson){
+                    //console.log(data);
+                    //This code sequence below was copied from users-view.php,
+                    BootstrapDialog.confirm({
+                                title: 'Update <strong>' + Johnson.product_name + '</strong>',
+
+
+
+
+
+[Creating MySQL Many-To-Many Relationship Junction Table - Connect Supplier To Product 19:]
+
+When we went to insert in suppliers taple, we unchecked the ignore checkbox
+Once you're done filling up two forms inside the insert tab, click the bottom right corner go button
+When he changed. show.php, when he made the $table_name = $show_table;
+instead of $table_name = $_session['table'];
+
+He then proceded to go to all files that uses show.php and added the
+ $show_table = 'products'; above, with differing values depending on the page
+
+relation view localhost is where you connect tables
+https://stackoverflow.com/questions/6186340/how-to-decide-between-using-if-else-vs-try-catch
+
+A lot of things got modified in this chapter
+
+The ? is to allow Parameterized Query. These parameterized query is to allow type-specific value when replacing the ? with their respective value.
+
+That's all to it.
+
+https://stackoverflow.com/questions/3727688/what-does-a-question-mark-represent-in-sql-queries
+
+
+
+
+
+[Inventory - How To Insert and Show Suppliers Data using HTML CSS PHP PDO MYSQL Database 20:]
+Just copy and pasting then modifying
+
+
+
+
+
+
+[How To Delete Data from MYSQL Database using HTML CSS JavaScript jQuery PHP PDO 21:]
+
+
+Many to many relations
+https://www.youtube.com/playlist?list=PLglf6-OPbGDfDFpnN67xqvTCR4WxQm4bd
+
+
+
+
+
+[Inventory System - Edit Suppliers Data using HTML CSS JS jQuery PHP PDO MYSQL Database 22:]
+You need to revisit the last few episodes to clear things up
+Too many confusing things, I also thing we need to clean up the code and remove some comments
+
+You'll notice that sometimes his if else is weird, but it works
+
+
+
+
+
+
+
+
+[Inventory - How To Create Purchase Order Form using HTML CSS JavaScript PHP PDO MySQL 23:]
+
+Previously we dealt with ajax and json and some jquery, we're not entirely sure what It does
+but we have a vague Idea of what it does
+
+Lines removed in chapter 23 at product-order.php
+
+    $_SESSION['table'] = 'products';
+    $_SESSION['redirect_to'] = 'product-add.php';
+
+    $user = $_SESSION['user'];
+
+product-order.php
+
+Remember to comprehend and look up the new method and keywords we used
+
+things we need to display
+- name of product
+- suppliers (based on productsupplier table not to be confused with product_suppliers)
+- quantity ordered
+- who ordered (based on current login user)
+- 
+
+
+console.log and var_dump are important for looking if something works or if data is being passed
+
+Go and reach for chapter 30px, then tomorrow go reach chapter 42:
+After that study this code for 2 days
+
+Bypassing inheritance
+#orderProductLists .row {
+    margin: none !important;
+}
+
+Not much happened its more like setting up and styling
+Remember the css specifiying tricks, like multiple class in one element
+or when you go through the elements to be very specific
+
+
+
+
+
+
+
+
+
+
+
+[How to Add JavaScript Events On Purchase Order Form - onChange onClick Events 24:]
+
+- order product - clicked
+    - show product name
+
+- product name - changed
+    - pull suppliers
+    - show supplier + quantity row
+
+
+
+<script>
+    var products = <?= $products ?>;
+    
+    function script(){
+        
+        this.initialize = function(){
+            this.registerEvents();
+        },
+
+        this.registerEvents = function(){
+
+            
+        }
+
+
+    }
+
+    (new script()).inititalize();
+</script>
+
+
+    new script creates and then initialized, when the function
+    script this.initialized the function that follows returns
+
+    this.initialize means when function is invoked initialize
+    the following   
+
+
+
+
+
+
+    document.addEventListener('click', function(e){
+        targetElement = e.target; 
+        classList = targetElement.classList;
+
+        if(targetElement.id === 'orderProductBtn'){
+            alert('')
+        }
+
+        if(classList.contains('deleteProduct')){
+            e.preventDefault(); 
+        }
+    };)
+
+
+    the click is head then the function e is run
+    then the e.target what got clicked gets placed in
+    targetElement.
+
+    then the targetElement.classList filters and gets 
+    the classList then places it on a variable called
+    classList.  .classList might be a method
+
+    The === means strictly equal, go look it up
+
+    this keyword might mean inside this function or
+    this function
+
+    this.registerEvents
+
+    if(targetElement.id === 'orderProductBtn'){
+    }
+
+    this above code block relates to this
+    <button class="orderBtn orderProductBtn" id="orderProductBtn"> Add Another Product</button>
+
+    [This code block below declares productOptions where element stuff is turned into string]
+
+                let productOptions = '\
+                    <div>\
+                        <label for="product_name">PRODUCT NAME  </label>\
+                        <select name="product_name" id="product_name"  class="productNameSelect">\
+                            <option value="">Product 1</option>\
+                        </select>\
+                    </div>';
+                
+                this.initialize = function(){
+                    this.registerEvents();
+                },
+
+                this.registerEvents = function(){
+
+                    document.addEventListener('click', function(e){
+                        targetElement = e.target; 
+                        classList = targetElement.classList;
+
+                        if(targetElement.id === 'orderProductBtn'){
+                            console.log(productOptions);
+                            alert('Hi');
+                        }
+                    });
+                }
+
+        the above is console logging out the productOptions
+
+
+
+
+
+
+
+        [In this code sequence below you can see that one function runs two functions
+         then those two functions, one folds the var products and the other holds the let productOptions
+         which is run if id orderProductBtn is clicked]
+
+            var products = <?= $products ?>;
+            
+            function script(){
+
+                let productOptions = '\
+                    <div>\
+                        <label for="product_name">PRODUCT NAME  </label>\
+                        <select name="product_name" id="product_name"  class="productNameSelect">\
+                            <option value="">Select Product</option>\
+                        </select>\
+                    </div>';
+                
+                this.initialize = function(){
+                    this.registerEvents();
+                    this.renderProductOptions();
+                },
+
+                this.renderProductOptions = function(){
+                    console.log(products);
+                }
+
+
+                this.registerEvents = function(){
+
+                    document.addEventListener('click', function(e){
+                        targetElement = e.target; 
+                        classList = targetElement.classList;
+
+                        if(targetElement.id === 'orderProductBtn'){
+                            console.log(productOptions);
+                        }
+                    });
+                }
+            }
+                
+
+                this one code line below is a mystery but it instantly runs the moment page is opens
+                which in turn runs the this.initialize function
+                (new script()).initialize();
+
+                Note that this line of code below works also
+                new script().initialize();
+
+
+
+
+        Look at the code sequence below
+
+        Note that not sure what json_encode us for
+         $products = include('database/show.php');
+         $products = json_encode($products);
+
+         is above this file, at the php section above
+         the php $products then gets turned into a var products
+         in script or javascript below here
+
+         then the products got attached to .foreach method which
+         then uses the product as its parameter to be used inside it
+         product then gets .id and other columns inside products which
+         represents a table in the database. += is you know this
+         its adding 
+
+
+        <script>
+            var products = <?= $products ?>;
+            
+            function script(){
+
+                let productOptions = '\
+                    <div>\
+                        <label for="product_name">PRODUCT NAME  </label>\
+                        <select name="product_name" id="product_name"  class="productNameSelect">\
+                            <option value="">Select Product</option>\
+                            INSERTPRODUCTHERE\
+                        </select>\
+                    </div>';
+                
+                this.initialize = function(){
+                    this.registerEvents();
+                    this.renderProductOptions();
+                },
+
+                this.renderProductOptions = function(){
+                    console.log(products);
+                    let optionHtml = '';
+                    products.foreach((product) =>{
+                        optionHtml += '<option value="'+ product.id +'">'+ product.product_name +'</option>';
+                    });
+
+                    productOptions.replace('INSERTPRODUCTHERE', optionHtml);
+                },
+
+    productOptions then gets the .replace method which inside says INSERTPRODUCTHERE
+    inside productOptions gets replaced by optionHtml, and that foreach runs that
+
+    This line of code belows does exactly what it looks like
+    productOptions = productOptions.replace('INSERTPRODUCTHERE', optionHtml);
+
+
+                        This below block of code makes it so
+                        when you click add another product button
+                        you'll get a new line where you can select product
+
+                        // Add New product order Event
+                        if(targetElement.id === 'orderProductBtn'){
+                            let orderProductListsContainer = document.getElementById('orderProductLists');
+
+                            orderProductListsContainer.innerHTML += '\
+                                <div class="orderProductRow">\
+                                    '+ productOptions +'\
+                                    <div class="suppliersRows"></div>\
+                                </div>';
+
+                        }
+
+
+
+
+
+This code block below when element with that class is clicked and changed
+which is the option thing where you pick the product. 
+
+document.addEventListener('change', function(e){
+    targetElement = e.target; // Target element
+    classList = targetElement.classList;
+
+
+    // Add suppliers row on product option change
+    if(classList.contains('productNameSelect')){
+        alert('change');
+
+    }
+});
+
+
+if(classList.contains('productNameSelect')){
+    let pid = targetElement.value;
+    console.log(pid);
+
+}
+
+this will log out the id of the product selected
+
+
+
+document.addEventListener('change', function(e){
+    targetElement = e.target; 
+    classList = targetElement.classList;
+
+    if(classList.contains('productNameSelect')){
+        let pid = targetElement.value;
+
+        if(!pid.length){
+            console.log('no-id');
+        }
+    }
+});
+
+
+the if(!pid.length)
+
+means it will run if theres no pid.length
+I don't know exactly what the length method is for
+just !pid works but lets just follow, might be a precution
+
+
+    This code sequence is from product-order.php and we'll move it to product-order.php
+
+    <?php
+        $supplier_list = 'Not-Set';
+
+        $pid = $product['id'];
+        $stmt = $conn->prepare("
+                        SELECT supplier_name
+                            FROM suppliers, productsuppliers
+                            WHERE
+                                productsuppliers.product=$pid
+                                    AND
+                                productsuppliers.supplier=suppliers.id                                 
+                        ");
+        $stmt->execute();
+        $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        if($row){
+
+            $supplier_arr = array_column($row, 'supplier_name');
+            $supplier_list = '<li>' . implode("</li><li>", $supplier_arr);
+
+        }
+        
+        echo $supplier_list
+
+    ?>
+
+
+$.get('database/get-supplier.php', {id: pid}, function(suppliers){
+    console.log(suppliers);
+}, 'json');
+
+
+This code block below will show the selected product's supplier name and id
+it also uses a new file called get-product-suppliers.php
+
+
+$.get('database/get-product-suppliers.php', {id: pid}, function(suppliers){
+    console.log(suppliers);
+}, 'json');
+
+
+
+<?php
+include('connection.php');
+$id = $_GET['id'];
+
+//Fetch suppliers
+$stmt = $conn->prepare("
+    SELECT supplier_name, suppliers.id
+        FROM suppliers, productsuppliers
+        WHERE
+            productsuppliers.product=$id
+                AND
+            productsuppliers.supplier=suppliers.id                                 
+    ");
+$stmt->execute();
+$suppliers = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+var_dump($suppliers);
+die;
+
+$row['products'] = array_column($products, 'id');
+
+echo json_encode($row);
+?> 
+
+Apparently you can leave out the end ?> thing there
+and it would still function normally
+
+
+Forgotten code sequence below
+
+                // let supplierHtmlTemplate =
+                //                 <div class="row">
+                //                     <div style="width: 50%">
+                //                         <p class="supplierName">Supplier 1</p>
+                //                     </div>
+                //                     <div style="width: 50%">
+                //                         <label for="quantity">Quantity </label>
+                //                         <input type="number" class="appFormInput" id="quantity" placeholder="Enter Quantity..." name="quantity"/>
+                //                     </div>
+                //                 </div>
+
+
+Not sure if vm is just a placeholder or it has meaning?
+
+var vm = this;
+
+
+                            $.get('database/get-product-suppliers.php', {id: pid}, function(suppliers){
+                                console.log(suppliers);
+                            }, 'json');
+
+
+
+var vm = this;
+
+I think I got what this line means now
+the this keyword goes inside vm which then makes the vm in to this
+so this line below
+vm.renderSupplierRows(suppliers);
+means this below
+this.renderSupplierRows
+
+
+Everytime the below code block gets run, something is added to the counter
+
+                                            var counter = 0; //This one is set above
+
+
+                                orderProductListsContainer.innerHTML += '\
+                                <div class="orderProductRow">\
+                                    '+ productOptions +'\
+                                    <div class="suppliersRows" id="supplierRows_'+ counter +'"></div>\
+                                </div>';
+
+                                //The counter will increment
+                                counter++;
+
+Look up this element attribute:
+data-
+
+
+
+    if(targetElement.id === 'orderProductBtn'){
+        let orderProductListsContainer = document.getElementById('orderProductLists');
+
+        orderProductListsContainer.innerHTML += '\
+            <div class="orderProductRow">\
+                '+ productOptions +'\
+                <div class="suppliersRows" id="supplierRows_'+ counter +'" data-counter="'+ counter +'"></div>\
+            </div>';
+
+        counter++;
+    }
+
+
+dataset is related to data-counter=""?
+console.log(targetElement.closest('div.orderProductRow').querySelector('.suppliersRows').dataset.counter);
+                            //targetElement.closest('div.orderProductRow');
+
+
+This is basically a huge specifier to grab a very specific part
+let counterId = targetElement.closest('div.orderProductRow').querySelector('.suppliersRows').dataset.counter
+
+
+This code below need += or else it'll only show one supplier
+suppliers.forEach((supplier) => {
+    supplierRows += '\
+
+
+                    //Append to Container
+                    let supplierRowContainer = document.getElementById('supplierRows_' + counterId);
+                    supplierRowContainer.innerHTML = supplierRows;
+
+
+so this keyword is an object thing
+and we set an object
+you know that new script()
+
+You know that math thing were the numbers are executed first
+if its within ()
+That must be why new script is inside ()
+It gets run first then follows the .initialize() method
+These are just speculations
+
+
+The class is here so when its summoned it will attach to css even though its not initially in the page
+                                    <input type="number" class="appFormInput" class="orderProductQty" id="quantity" placeholder="Enter Quantity..." name="quantity"/>\
+
+
+
+
+
+
+
+
+
+
+[Inventory Management System - Delete Order Row HTML Element using JavaScript remove() 25:]
+
+
+                            counter++;
+                        }
+
+                        //If remove button is clicked
+                        if(targetElement.classList.contains('removeOrderBtn')){
+                            alert('hi')
+                        }
+                    });
+
+you can see if it works
+
+
+
+div.row div input.appFormInput{
+    font-weight: none !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.appbtn{
+    border: none;
+    padding: 4px 8px;
+    background: #ff5858;
+    border-radius: 2px;
+}
+
+/*Why are they seperated when they are targeting the same element*/
+/*remove button has a hover feature, but i didnt set that?
+  now that hover feautre is gone for some reason after 5:00 chapter 25*/
+
+.removeOrderBtn{
+    background: #ff5858;
+    color: #fff;
+    float: right;
+}
+
+
+                        if(targetElement.classList.contains('removeOrderBtn')){
+
+                            let orderRow = targetElement
+                                .closest('div.orderProductRow')
+                            
+                            
+                            //Remove element.
+                            console.log(orderRow);
+
+                        }
+                    });
+
+
+
+                        if(targetElement.classList.contains('removeOrderBtn')){
+
+                            let orderRow = targetElement
+                                .closest('div.orderProductRow');
+                            
+                            //Remove element.
+                            orderRow.remove(); 
+                        }
+
+
+
+
+
+
+
+
+[How To Insert Data Record to MySQL Database from Purchase Order Form using PHP PDO 26:]
+
+
+
+                let productOptions = '\
+                    <div>\
+                        <label for="product_name">PRODUCT NAME  </label>\
+                        <select name="product_name[]" id="product_name"  class="productNameSelect">\
+                            <option value="">Select Product</option>\
+                            INSERTPRODUCTHERE\
+                        </select>\
+                        <button class="appbtn removeOrderBtn">Remove</button>\
+                    </div>';
+
+
+                    <select name="product_name[]" id="product_name"  class="productNameSelect">\
+
+Why is name attribute has []? I dont know why, this is chapter 26
+
+
+                        <select name="order[product_name][]" id="product_name"  class="productNameSelect">\
+
+Above something about becoming an array
+
+
+                                    <input type="number" class="appFormInput orderProductQty" id="quantity" placeholder="Enter Quantity..." name="order[quantity]['+ supplier.id +']"/>\
+
+Above something about array and stuff
+
+name="order[quantity]['+ supplier.id +']
+from above to bottom, he said adding extra array
+name="order[quantity]['+ supplier.id +'][]
+
+Then it got modified again to turn like this below
+name="order[quantity][]['+ supplier.id +']
+
+Then he said more array and this below was made
+name="order[quantity][][]['+ supplier.id +']
+
+
+<input type="number" class="appFormInput orderProductQty" id="quantity" placeholder="Enter Quantity..." name="quantity['+ supplier.id +']"/>\
+
+<select name="products[]" id="product_name"  class="productNameSelect">\
+
+This two combo makes this
+Now what this array line means is that 0 has value of 40 which is the id of Dua a product name and then in quantity array theres 1 and 4
+there at the beginning because thats the id number of those respective suppliers from supplier table 1 is nestle and 4 is JYPEE
+array(2) { ["products"]=> array(1) { [0]=> string(2) "40" } ["quantity"]=> array(2) { [1]=> string(3) "222" [4]=> string(3) "222" } } 
+
+
+                                    <input type="number" class="appFormInput orderProductQty" id="quantity" placeholder="Enter Quantity..." name="quantity['+ supplier.id +']"/>\
+from above changed to below
+                                    <input type="number" class="appFormInput orderProductQty" id="quantity" placeholder="Enter Quantity..." name="quantity[]['+ supplier.id +']"/>\
+the above makes this prints out this
+array(2) { ["products"]=> array(1) { [0]=> string(2) "17" } ["quantity"]=> array(2) { [0]=> array(1) { [1]=> string(4) "1111" } [1]=> array(1) { [4]=> string(4) "4444" } } }
+
+organized ver:
+(array) [2 elements]
+products: 
+(array) [1 element]
+0: (string) "17"
+quantity: 
+(array) [2 elements]
+0: 
+(array) [1 element]
+1: (string) "1111"
+1: 
+(array) [1 element]
+4: (string) "4444"
+
+modified to this below
+                                    <input type="number" class="appFormInput orderProductQty" id="quantity" placeholder="Enter Quantity..." name="quantity['+ counterId +']['+ supplier.id +']"/>\
+
+Remove the [] below and var_dump see what happens   
+                        <select name="products[]" id="product_name"  class="productNameSelect">\
+
+
+the counter affects the quantity array number since we have the remove() feature
+So if initially you made 4 forms
+then you deleted the first 2 and added another 2
+the result would be in that situation is 
+3 4 5 6
+
+the first two got removed since we removed it
+
+$post_data = $_POST;
+//this pulls out data
+$products = $post_data['products'];
+
+$post_data_arr = [];
+
+$post_data = $_POST;
+$products = $post_data['products'];
+
+$post_data_arr = [];
+
+var_dump($products);
+die;
+
+products might relate to the one inside name="" attribute
+in the stringified section on let productOptions =
+
+$post_data = $_POST;
+$products = $post_data['products'];
+
+$post_data_arr = [];
+
+var_dump($products);
+die;
+
+that will pull this
+(array) [4 elements]
+0: (string) "17"
+1: (string) "41"
+2: (string) "17"
+3: (string) "16"
+
+instead of this
+
+[From save-order this line directly below]
+var_dump($_POST);
+die;
+
+(array) [2 elements]
+products: 
+(array) [4 elements]
+0: (string) "17"
+1: (string) "41"
+2: (string) "17"
+3: (string) "16"
+quantity: 
+(array) [4 elements]
+
+0: 
+(array) [2 elements]
+1: (string) "2222"
+4: (string) "3333"
+
+1: 
+(array) [3 elements]
+1: (string) "1111"
+2: (string) "1111"
+4: (string) "1111"
+
+2: 
+(array) [2 elements]
+1: (string) "111"
+4: (string) "111"
+
+3: 
+(array) [2 elements]
+1: (string) "111"
+2: (string) "111"
+
+$post_data = $_POST;
+$products = $post_data['products'];
+
+products relates to the name="" attribute
+containing products which also happens to have []
+
+it gets produced and placed inside a form that has POST
+and so when submitted it gets sent to save-order;
+
+Its complicated but don't worry you'll get it once you read it
+
+
+this following code fixes the situation where 
+if you remove a add product row, it removes the past integer numbers
+so the 3456 and the removed 12
+This below fixes it so it becomes 0123 etc again
+
+$qty = array_values($post_data['quantity']);
+
+var_dump($qty);
+die;
+
+This below  codes makes the following after It
+
+$post_data = $_POST;
+$products = $post_data['products'];
+$qty = array_values($post_data['quantity']);
+
+$post_data_arr = [];
+
+foreach($products as $key => $pid) {
+    if(isset($qty[$key])) $post_data_arr[$pid] = $qty[$key];
+}
+
+
+var_dump($post_data_arr);
+die;
+
+(array) [3 elements]
+17: 
+(array) [2 elements]
+1: (string) "111"
+4: (string) "111"
+41: 
+(array) [3 elements]
+1: (string) "1111"
+2: (string) "1111"
+4: (string) "1111"
+16: 
+(array) [2 elements]
+1: (string) "111"
+2: (string) "111"
+
+<?php
+
+$post_data = $_POST;
+$products = $post_data['products'];
+$qty = array_values($post_data['quantity']);
+
+$post_data_arr = [];
+
+foreach($products as $key => $pid) {
+    if(isset($qty[$key])) $post_data_arr[$pid] = $qty[$key];
+}
+
+// Store data.
+foreach($post_data_arr as $pid => $supplier_qty){
+    foreach($supplier_qty as $sid => $qty){
+        echo $pid . ' ' . $sid . ' ' . $qty . '<br/>';
+    }
+}
+
+var_dump($post_data_arr);
+die;
+
+
+?>
+
+the above code results to this following:
+
+17 1 111
+17 4 111
+41 1 1111
+41 2 1111
+41 4 1111
+16 1 111
+16 2 111
+array(3) { [17]=> array(2) { [1]=> string(3) "111" [4]=> string(3) "111" } [41]=> array(3) { [1]=> string(4) "1111" [2]=> string(4) "1111" [4]=> string(4) "1111" } [16]=> array(2) { [1]=> string(3) "111" [2]=> string(3) "111" } }
+
+
+This is a general technique you need to think about
+If you can think that solution, it probably exists
+So if you ask how can I turn this array into a string
+theres probably a solution or method or whatever that can do that
+
+
+We went to add.php now
+copied $supplier_data=[] and others from add.php
+
+now we went to phpmyadmin database
+ALTER TABLE product_supplier RENAME order_product;
+which means we already strayed so far from the original plan or Diagram
+
+
+
+foreach($post_data_arr as $pid => $supplier_qty){
+    foreach($supplier_qty as $sid => $qty){
+        // Insert to database.  
+        //echo $pid . ' ' . $sid . ' ' . $qty . '<br/>';
+
+
+// Include connection
+include('connection.php');
+
+// Store data.
+foreach($post_data_arr as $pid => $supplier_qty){
+    foreach($supplier_qty as $sid => $qty){
+        // Insert to database.  
+        //echo $pid . ' ' . $sid . ' ' . $qty . '<br/>';
+
+        $values = [
+            'supplier' => $supplier,
+            'product_id' => $product_id,
+            'updated_at' => date('Y-m-d H:i:s'),
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+
+
+                    $sql = "INSERT INTO productsuppliers
+                                        (supplier, product, updated_at, created_at)
+                                    VALUES
+                                        (:supplier_id, :product_id, :updated_at, :created_at)";
+
+                    $stmt = $conn->prepare($sql);
+                    $stmt->execute($supplier_data);
+
+    }
+}
+
+
+
+
+var_dump($post_data_arr);
+die;
+
+Logout.php updated:
+
+    header('location: /fullstackwebproject/PHPProjectInventoryManagementSystem/login.php');
+
+
+    header('location: ../login.php');
+
+
+$_SESSION['response'] = [
+    'message' => $message,
+    'success' => $success
+]
+
+Notice the relation between above and below?
+
+$response_message = $_SESSION['response']['message'];
+$is_success = $_SESSION['response']['success'];
+
+
+                                <?php
+                                        if(isset($_SESSION['response'])){
+                                            $response_message = $_SESSION['response']['message'];
+                                            $is_success = $_SESSION['response']['success'];
+                                    ?>
+                                        <div class="responseMessage">
+                                            <p class="responseMessage <?= $is_success ? 'responseMessage_success' : 'responseMessage_error' ?>">
+                                                <?= $response_message ?>
+                                            </p>
+                                        </div>
+                                    <?php unset($_SESSION['response']); } ?>
+
+
+He did some styling to the submit button that I didnt do
+
+                        if(targetElement.id === 'orderProductBtn'){
+                            document.getElementById('noData').style.display = 'none';
+                            let orderProductListsContainer = document.getElementById('orderProductLists');
+
+Above block of code deletes the p element inside
+
+
+
+
+
+
+[Getting Purchase Orders Records From MySQL Database - Creating The Page using HTML CSS 27:]
+
+This is just html and css I presume based on the title, so it could be an easy to follow
+
+supplier
+product
+qty ordered
+status
+batch
+created by
+created at
+
+Btw the key to solving the password_hash problem is with password_verify
+https://stackoverflow.com/questions/24024702/how-can-i-decrypt-a-password-hash-in-php
+
+
+
+
+
+
+
+[Inventory System How to Pull Purchase Orders Records from MySQL Database to HTML Table 28:]
+
+                                <div class="section_content">
+                                    <div class="poListContainers">
+                                        <div class="poList">
+                                            <p>Batch #: 1676526430</p>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Product</th>
+                                                        <th>Qty Ordered</th>
+                                                        <th>Supplier</th>
+                                                        <th>Status</th>
+                                                        <th>Ordered By</th>
+                                                        <th>Created Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>#</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>#</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="poOrderUpdateBtnContainer alignRight">
+                                                <button class="appBtn updatePoBtn">Update</button>
+                                            </div>
+                                        </div>
+                                        <div class="poList">
+                                            <p>Batch #: 1676526430</p>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Product</th>
+                                                        <th>Qty Ordered</th>
+                                                        <th>Supplier</th>
+                                                        <th>Status</th>
+                                                        <th>Ordered By</th>
+                                                        <th>Created Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>#</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>#</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="poOrderUpdateBtnContainer alignRight">
+                                                <button class="appBtn updatePoBtn">Update</button>
+                                            </div>
+                                        </div>
+                                        <div class="poList">
+                                            <p>Batch #: 1676526430</p>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Product</th>
+                                                        <th>Qty Ordered</th>
+                                                        <th>Supplier</th>
+                                                        <th>Status</th>
+                                                        <th>Ordered By</th>
+                                                        <th>Created Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>#</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>#</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="poOrderUpdateBtnContainer alignRight">
+                                                <button class="appBtn updatePoBtn">Update</button>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>         
+
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+
+Copied code from product-view to view-order
+
+                                <div class="section_content">
+                                    <div class="poListContainers">
+                                        <?php
+                                            $supplier_list = 'Not-Set';
+
+                                            $pid = $product['id'];
+                                            $stmt = $conn->prepare("
+                                                            SELECT supplier_name
+                                                                FROM suppliers, productsuppliers
+                                                                WHERE
+                                                                    productsuppliers.product=$pid
+                                                                        AND
+                                                                    productsuppliers.supplier=suppliers.id                                 
+                                                            ");
+                                            $stmt->execute();
+                                            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                        ?>
+                                        <div class="poList">
+                                            <p>Batch #: 1676526430</p>
+                                            <table>
+
+His process is gettting all first from the tables it wants to get
+then var dumping to see if it works properly
+
+
+                                    <div class="poListContainers">
+                                        <?php
+                                            $stmt = $conn->prepare("
+                                                            SELECT *
+                                                                FROM order_product, suppliers, products, users
+                                                                WHERE
+                                                                    order_product.supplier = suppliers.id
+                                                                        AND
+                                                                    order_product.product = products.id
+                                                                        AND
+                                                                    order_product.created_by = users.id
+                                                            ");
+                                            $stmt->execute();
+                                            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                            var_dump($rows);
+                                            die;
+                                        ?>
+                                        <div class="poList">
+
+You can see the relations with SELECT
+FROM and WHERE there just think about it
+and you'll know, just like I do
+
+                                    <div class="poListContainers">
+                                        <?php
+                                            $stmt = $conn->prepare("
+                                                            SELECT products.product_name, order_product.quantity_ordered, users.first_name,
+                                                                    users.last_name, suppliers.supplier_name, order_product.status, order_product.created_at
+                                                                FROM order_product, suppliers, products, users
+                                                                WHERE
+                                                                    order_product.supplier = suppliers.id
+                                                                        AND
+                                                                    order_product.product = products.id
+                                                                        AND
+                                                                    order_product.created_by = users.id
+                                                            ");
+                                            $stmt->execute();
+                                            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                            var_dump($rows);
+                                            die;
+                                        ?>
+                                        <div class="poList">
+
+                                        Try and make sense of the code below
+
+                                            $stmt = $conn->prepare("
+                                                            SELECT products.product_name, order_product.quantity_ordered, users.first_name, order_product.batch,
+                                                                    users.last_name, suppliers.supplier_name, order_product.status, order_product.created_at
+                                                                FROM order_product, suppliers, products, users
+                                                                WHERE
+                                                                    order_product.supplier = suppliers.id
+                                                                        AND
+                                                                    order_product.product = products.id
+                                                                        AND
+                                                                    order_product.created_by = users.id
+                                                                ORDER BY
+                                                                    order_product.created_at DESC
+                                                            ");
+                                            $stmt->execute();
+                                            $purchase_orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                            $data = [];
+                                            foreach($purchase_orders as $purchase_order){
+                                                $data[$purchase_order['batch']][] = $purchase_order;
+                                            }
+
+
+
+                                            var_dump($data);
+                                            die;
+
+                                            Also this code sequence above produces this which you can see with var_masterpiece
+
+                                            (array) [4 elements]
+1701669137: 
+(array) [7 elements]
+0: 
+(array) [8 elements]
+product_name: (string) "Hotdog"
+quantity_ordered: (string) "2147483647"
+first_name: (string) "Dahyun"
+batch: (string) "1701669137"
+last_name: (string) "Kim"
+supplier_name: (string) "Apple"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:52:17"
+1: 
+(array) [8 elements]
+product_name: (string) "TWICE Jacket World Tour"
+quantity_ordered: (string) "66666666"
+first_name: (string) "Dahyun"
+batch: (string) "1701669137"
+last_name: (string) "Kim"
+supplier_name: (string) "Nestle"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:52:17"
+2: 
+(array) [8 elements]
+product_name: (string) "Dua"
+quantity_ordered: (string) "444444444"
+first_name: (string) "Dahyun"
+batch: (string) "1701669137"
+last_name: (string) "Kim"
+supplier_name: (string) "Nestle"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:52:17"
+3: 
+(array) [8 elements]
+product_name: (string) "Hotdog"
+quantity_ordered: (string) "2147483647"
+first_name: (string) "Dahyun"
+batch: (string) "1701669137"
+last_name: (string) "Kim"
+supplier_name: (string) "Nestle"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:52:17"
+4: 
+(array) [8 elements]
+product_name: (string) "TWICE Jacket World Tour"
+quantity_ordered: (string) "77777777"
+first_name: (string) "Dahyun"
+batch: (string) "1701669137"
+last_name: (string) "Kim"
+supplier_name: (string) "JYPEEE"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:52:17"
+5: 
+(array) [8 elements]
+product_name: (string) "Dua"
+quantity_ordered: (string) "555555555"
+first_name: (string) "Dahyun"
+batch: (string) "1701669137"
+last_name: (string) "Kim"
+supplier_name: (string) "JYPEEE"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:52:17"
+6: 
+(array) [8 elements]
+product_name: (string) "Hotdog"
+quantity_ordered: (string) "2147483647"
+first_name: (string) "Dahyun"
+batch: (string) "1701669137"
+last_name: (string) "Kim"
+supplier_name: (string) "JYPEEE"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:52:17"
+1701669021: 
+(array) [7 elements]
+0: 
+(array) [8 elements]
+product_name: (string) "Hotdog"
+quantity_ordered: (string) "2147483647"
+first_name: (string) "Dahyun"
+batch: (string) "1701669021"
+last_name: (string) "Kim"
+supplier_name: (string) "Apple"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:50:21"
+1: 
+(array) [8 elements]
+product_name: (string) "TWICE Jacket World Tour"
+quantity_ordered: (string) "11246"
+first_name: (string) "Dahyun"
+batch: (string) "1701669021"
+last_name: (string) "Kim"
+supplier_name: (string) "Nestle"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:50:21"
+2: 
+(array) [8 elements]
+product_name: (string) "Dua"
+quantity_ordered: (string) "1212312"
+first_name: (string) "Dahyun"
+batch: (string) "1701669021"
+last_name: (string) "Kim"
+supplier_name: (string) "Nestle"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:50:21"
+3: 
+(array) [8 elements]
+product_name: (string) "Hotdog"
+quantity_ordered: (string) "1122121"
+first_name: (string) "Dahyun"
+batch: (string) "1701669021"
+last_name: (string) "Kim"
+supplier_name: (string) "Nestle"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:50:21"
+4: 
+(array) [8 elements]
+product_name: (string) "TWICE Jacket World Tour"
+quantity_ordered: (string) "12121"
+first_name: (string) "Dahyun"
+batch: (string) "1701669021"
+last_name: (string) "Kim"
+supplier_name: (string) "JYPEEE"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:50:21"
+5: 
+(array) [8 elements]
+product_name: (string) "Dua"
+quantity_ordered: (string) "113132"
+first_name: (string) "Dahyun"
+batch: (string) "1701669021"
+last_name: (string) "Kim"
+supplier_name: (string) "JYPEEE"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:50:21"
+6: 
+(array) [8 elements]
+product_name: (string) "Hotdog"
+quantity_ordered: (string) "2147483647"
+first_name: (string) "Dahyun"
+batch: (string) "1701669021"
+last_name: (string) "Kim"
+supplier_name: (string) "JYPEEE"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:50:21"
+1701668921: 
+(array) [7 elements]
+0: 
+(array) [8 elements]
+product_name: (string) "TWICE One More Time Photocards"
+quantity_ordered: (string) "12314"
+first_name: (string) "Dahyun"
+batch: (string) "1701668921"
+last_name: (string) "Kim"
+supplier_name: (string) "Apple"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:48:41"
+1: 
+(array) [8 elements]
+product_name: (string) "Hotdog"
+quantity_ordered: (string) "3111"
+first_name: (string) "Dahyun"
+batch: (string) "1701668921"
+last_name: (string) "Kim"
+supplier_name: (string) "Apple"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:48:41"
+2: 
+(array) [8 elements]
+product_name: (string) "TWICE One More Time Photocards"
+quantity_ordered: (string) "13234"
+first_name: (string) "Dahyun"
+batch: (string) "1701668921"
+last_name: (string) "Kim"
+supplier_name: (string) "Nestle"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:48:41"
+3: 
+(array) [8 elements]
+product_name: (string) "Dua"
+quantity_ordered: (string) "211111"
+first_name: (string) "Dahyun"
+batch: (string) "1701668921"
+last_name: (string) "Kim"
+supplier_name: (string) "Nestle"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:48:41"
+4: 
+(array) [8 elements]
+product_name: (string) "Hotdog"
+quantity_ordered: (string) "3112"
+first_name: (string) "Dahyun"
+batch: (string) "1701668921"
+last_name: (string) "Kim"
+supplier_name: (string) "Nestle"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:48:41"
+5: 
+(array) [8 elements]
+product_name: (string) "Dua"
+quantity_ordered: (string) "311111"
+first_name: (string) "Dahyun"
+batch: (string) "1701668921"
+last_name: (string) "Kim"
+supplier_name: (string) "JYPEEE"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:48:41"
+6: 
+(array) [8 elements]
+product_name: (string) "Hotdog"
+quantity_ordered: (string) "41111"
+first_name: (string) "Dahyun"
+batch: (string) "1701668921"
+last_name: (string) "Kim"
+supplier_name: (string) "JYPEEE"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:48:41"
+1701668410: 
+(array) [1 element]
+0: 
+(array) [8 elements]
+product_name: (string) "Dua"
+quantity_ordered: (string) "5667"
+first_name: (string) "Dahyun"
+batch: (string) "1701668410"
+last_name: (string) "Kim"
+supplier_name: (string) "JYPEEE"
+status: (string) "ORDERED"
+created_at: (string) "2023-12-04 06:40:10"
+
+
+I'll screenshot this so you can check it on screenshot folder
+
+I think this line of code below so on select sql command batch column pas pulled
+I guess for each batch pulled there will be run? and the extra [] holds the contents 
+related to batch? but the = $purchase_order; is a tad bit confusing
+            $data[$purchase_order['batch']][] = $purchase_order;
+
+
+The code sequence below, we've seen this before or used before
+Its covering an entire code block and producing it. New this will produce each one for each batch pulled
+
+                                            $data = [];
+                                            foreach($purchase_orders as $purchase_order){
+                                                $data[$purchase_order['batch']][] = $purchase_order;
+                                            }
+
+                                        ?>
+
+                                        <?php
+                                            foreach($data as $batch_id => $batch_po){
+                                        ?>
+
+                                        <div class="poList">
+                                            <p>Batch #: 1676526430</p>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Product</th>
+                                                        <th>Qty Ordered</th>
+                                                        <th>Supplier</th>
+                                                        <th>Status</th>
+                                                        <th>Ordered By</th>
+                                                        <th>Created Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Product</td>
+                                                        <td>Qty Ordered</td>
+                                                        <td>Supplier</td>
+                                                        <td>Status</td>
+                                                        <td>Ordered By</td>
+                                                        <td>Created Date</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="poOrderUpdateBtnContainer alignRight">
+                                                <button class="appBtn updatePoBtn">Update</button>
+                                            </div>
+                                        </div>
+
+                                        <?php } ?>
+
+
+With this the batch will respond to the batches pulled
+                                        <?php
+                                            foreach($data as $batch_id => $batch_po){
+                                        ?>
+
+                                        <div class="poList">
+                                            <p>Batch #: <?= $batch_id ?> </p>
+                                            <table>
+
+it only displayed the batch but not the values attached to that batch, why?
+maybe cause its not specified? Not sure
+
+
+                                        <?php
+                                            foreach($data as $batch_id => $batch_pos){
+                                        ?>
+
+                                        <div class="poList">
+
+Change at top
+
+foreach start at the beggining arrays start at zero so we add
+1 to $index and the rest pulls their own column equivalent to the array id they are in
+Also note that at the view-order.php page the one at the top usually is the latest ordered
+
+
+    <tbody>
+        <?php
+            foreach($batch_pos as $index => $batch_po) {
+        ?>
+        <tr>
+            <td> <?= $index + 1 ?> </td>
+            <td><?= $batch_po['product_name']?></td>
+            <td><?= $batch_po['quantity_ordered']?></td>
+            <td><?= $batch_po['supplier_name']?></td>
+            <td><?= $batch_po['status']?></td>
+            <td><?= $batch_po['first_name' . ' ' . 'last_name']?></td>
+            <td><?= $batch_po['created_at']?></td>
+        </tr>
+        <?php
+        }
+        ?>
+    </tbody>
+
+THis code below relates to the css specifier that it pulles
+so if the column is arrived it will change css, you can see it here on code below
+
+<td><?= $batch_po['supplier_name']?></td>
+<td><span class="po-badge po-badge-<?= $batch_po['status'] ?>"><?= $batch_po['status']?><span></td>
+<td><?= $batch_po['first_name'] . ' ' . $batch_po['last_name']?></td>
+
+.po-badge{
+    padding: 4px 6px;
+    border: 1px solid;
+}
+
+.po-badge-ORDERED{
+    background: #ff938e;
+    border-color: #556455;
+}
+
+.po-badge-ARRIVED{
+    background: #b5ebb5;
+    border-color: green;
+}
+
+he changed the code, heres the new set changes
+
+.po-badge{
+    padding: 4px 6px;
+    border: 1px solid;
+}
+
+.po-badge-pending{
+    background: #ff938e;
+    border-color: #556455;
+}
+
+.po-badge-complete{
+    background: #b5ebb5;
+    border-color: green;
+}
+
+the values status column holds now are either complete or pending
+
+
+
+
+
+
+
+
+
+
+
+[Updating Purchase Order - Convert HTML Table To Object with JavaScript - PART I 29:]
+
+So, it turns out that we made a mistake naming column quantity_recieve 
+it should have been quantity_received so fuck, hopefully this doesnt mess things up
+although I checked with find anything else named recieve and only three turns up and
+we fixed and changed that
+
+
+data- attribute seems to be important
+    <button class="appBtn updatePoBtn" data-id="">Update</button>
+
+what this below lines mean is that $batch_pos as $index and then $batch_po pulls out from it
+which is different from -> which just pulls out a method or fucnction to use
+foreach($batch_pos as $index => $batch_po) {
+
+We finally fixed the hole Previously
+now when we add order the status placed isnt ORDERED
+it now prints out pending. change made in save-order.php
+
+po stands for purchase order
+
+            // Insert to database.  
+    
+            $values = [
+                'supplier' => $sid,
+                'product' => $pid,
+                'quantity_ordered' => $qty,
+                'status' => 'pending',
+                'batch' => $batch,
+                'created_by' => $_SESSION['user']['id'],
+                'updated_at' => date('Y-m-d H:i:s'),
+                'created_at' => date('Y-m-d H:i:s')
+            ];
+
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(e){
+                    targetElement = e.target; 
+                    classList = targetElement.classList;
+                    if(classList.contains('updatePoBtn')){
+                        alert('Hi');
+                        return;
+
+                        e.preventDefault(); 
+
+                        pId = targetElement.dataset.pid;
+                        pName = targetElement.dataset.pname;
+                        
+This code block above just test if update button works
+
+
+product = document.querySelector('#' + batchNumberContainer + ' .po_product').text;
+above changed to this below, since keeping .text would result into undefined
+product = document.querySelector('#' + batchNumberContainer + ' .po_product').innerText;
+
+
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(e){
+                    targetElement = e.target; // Target element
+                    classList = targetElement.classList;
+
+                    if(classList.contains('updatePoBtn')){
+                        e.preventDefault(); 
+
+                        batchNumberContainer = 'container-' + targetElement.dataset.id;
+
+                        // Get all purchase order product records
+                        product = document.querySelector('#' + batchNumberContainer + ' .po_product').innerText;
+                        qtyOrdered = document.querySelector('#' + batchNumberContainer + ' .po_qty_ordered').innerText;
+                        qtyReceived = document.querySelector('#' + batchNumberContainer + ' .po_qty_received').innerText;
+                        supplier = document.querySelector('#' + batchNumberContainer + ' .po_qty_supplier').innerText;
+                        status = document.querySelector('#' + batchNumberContainer + ' .po_qty_status').innerText;
+
+                        console.log(product, qtyOrdered, qtyReceived, supplier, status);
+                        return;
+
+
+                        
+                        BootstrapDialog.confirm({
+
+
+product = document.querySelectorAll('#' + batchNumberContainer + ' .po_product');
+qtyOrdered = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_ordered');
+qtyReceived = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_received');
+supplier = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_supplier');
+status = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_status');
+
+
+                    if(classList.contains('updatePoBtn')){
+                        e.preventDefault(); 
+
+                        batchNumberContainer = 'container-' + targetElement.dataset.id;
+
+                        // Get all purchase order product records
+                        productList = document.querySelectorAll('#' + batchNumberContainer + ' .po_product');
+                        qtyOrderedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_ordered');
+                        qtyReceivedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_received');
+                        supplierList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_supplier');
+                        statusList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_status');
+
+                        poListsArr = [];
+
+                        productList.forEach((product, key) => {
+                            console.log(key);
+                        })
+
+This above code sequence results to this showing up in console:
+
+0
+1
+2
+3
+4
+5
+6
+
+                    if(classList.contains('updatePoBtn')){
+                        e.preventDefault(); 
+
+                        batchNumberContainer = 'container-' + targetElement.dataset.id;
+
+                        // Get all purchase order product records
+                        productList = document.querySelectorAll('#' + batchNumberContainer + ' .po_product');
+                        qtyOrderedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_ordered');
+                        qtyReceivedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_received');
+                        supplierList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_supplier');
+                        statusList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_status');
+
+                        poListsArr = [];
+
+                        for(i=0; i<productList.length; i++){
+                            poListsArr.push({
+                                name: productList[i].innerText,
+                                qtyOrdered: qtyOrderedList[i].innerText,
+                                qtyReceived: qtyReceivedList[i].innerText,
+                                supplier: supplierList[i].innerText,
+                                status: statusList[i].innerText,
+                            });
+                        }
+
+                        console.log(poListsArr);
+                        return;
+
+                        productList.forEach((product, key) => {
+                            poListsArr[key]['product'] = product.innerText;
+                        })
+
+This code sequence above pulls out this
+results below.
+
+
+Array(7) [ {…}, {…}, {…}, {…}, {…}, {…}, {…} ]
+​
+0: Object { name: "TWICE Jacket World Tour", qtyOrdered: "77777777", supplier: "JYPEEE", … }
+​
+1: Object { name: "Hotdog", qtyOrdered: "2147483647", supplier: "Apple", … }
+​
+2: Object { name: "Hotdog", qtyOrdered: "2147483647", supplier: "Nestle", … }
+​
+3: Object { name: "Dua", qtyOrdered: "444444444", supplier: "Nestle", … }
+​
+4: Object { name: "TWICE Jacket World Tour", qtyOrdered: "66666666", supplier: "Nestle", … }
+​
+5: Object { name: "Hotdog", qtyOrdered: "2147483647", supplier: "JYPEEE", … }
+​
+6: Object { name: "Dua", qtyOrdered: "555555555", supplier: "JYPEEE", … }
+​
+length: 7
+
+
+Remember the two complex data types: Array and objects
+(Class is another, but I forgot if its === strictly a complex one)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[How to Update Data and Save Purchase Orders using PHP PDO and MYSQL Database - PART II 30:]
+
+
+
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(e){
+                    targetElement = e.target; // Target element
+                    classList = targetElement.classList;
+
+                    if(classList.contains('updatePoBtn')){
+                        e.preventDefault(); 
+
+                        batchNumberContainer = 'container-' + targetElement.dataset.id;
+
+                        // Get all purchase order product records
+                        productList = document.querySelectorAll('#' + batchNumberContainer + ' .po_product');
+                        qtyOrderedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_ordered');
+                        qtyReceivedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_received');
+                        supplierList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_supplier');
+                        statusList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_status');
+
+                        poListsArr = [];
+                        for(i=0; i<productList.length; i++){
+                            poListsArr.push({
+                                name: productList[i].innerText,
+                                qtyOrdered: qtyOrderedList[i].innerText,
+                                qtyReceived: qtyReceivedList[i].innerText,
+                                supplier: supplierList[i].innerText,
+                                status: statusList[i].innerText,
+                            });
+                        }
+
+                        productList.forEach((product, key) => {
+                            poListsArr[key]['product'] = product.innerText;
+                        });
+
+                        console.log(poListsArr);
+                        return;
+
+                        pName = targetElement.dataset.name;
+
+This code above will result in this console.log when you click update button
+
+Array(4) [ {…}, {…}, {…}, {…} ]
+​
+0: Object { name: "Dua", qtyOrdered: "3123123", supplier: "JYPEEE", … }
+​
+1: Object { name: "TWICE Jacket World Tour", qtyOrdered: "123123", supplier: "JYPEEE", … }
+​
+2: Object { name: "Dua", qtyOrdered: "12312", supplier: "Nestle", … }
+​
+3: Object { name: "TWICE Jacket World Tour", qtyOrdered: "1212", supplier: "Nestle", … }
+​
+length: 4
+
+
+Again I think this below line of code means
+If truthy go with left (selected) if falsy go right ('')
+So if things arent met
+
+<option value="pending" '+ (poList.status == 'pending' ? 'selected' : '') +'>pending</option>\
+
+
+                        var poListHtml = '\
+                                            <table>\
+                                                <thead>\
+                                                    <tr>\
+                                                        <th>Product Name</th>\
+                                                        <th>Qty Ordered</th>\
+                                                        <th>Qty Received</th>\
+                                                        <th>Supplier</th>\
+                                                        <th>Status</th>\
+                                                    </tr>\
+                                                </thead>\
+                                                <tbody>';
+
+                        poListsArr.forEach((poList) => {
+                            poListHtml += '\
+                            <tr>\
+                                <td class="po_product">'+ poList.name +'</td>\
+                                <td class="po_qty_ordered">'+ poList.qtyOrdered +'</td>\
+                                <td class="po_qty_received"><input type="number" value="'+ poList.qtyReceived +'"></td>\
+                                <td class="po_qty_supplier">'+ poList.supplier +'</td>\
+                                <td>\
+                                    <select>\
+                                        <option value="pending" '+ (poList.status == 'pending' ? 'selected' : '') +'>pending</option>\
+                                        <option value="complete" '+ (poList.status == 'complete' ? 'selected' : '') +'>complete</option>\
+                                    </select>\
+                                    <input type="hidden" class="po_qty_row_id" value="<?= $batch_po['id'] ?>">\
+                                </td>\
+                            </tr>\
+                            ';
+                            console.log(poList);
+                        });
+                        poListHtml += '</tbody></table>';
+
+
+</tbody> and </table> is outside because its like that
+
+.updateInputStyle{
+    width: 100%;
+}
+
+I added this code block style above to fix overflow hidden for quantity
+
+This below is related to the ids in order_product table
+<input type="hidden" class="po_qty_row_id" value="'+ poList.id +'">\
+
+
+                            message: poListHtml,
+                            callback: function(toAdd){
+                                console.log(toAdd);
+                                return;
+                                //Thus above is a function, so when you click cancel it will product false and if you do the positve button it will do true
+                                if(isDelete){
+                                    alert('Will be deleting');
+                                    $.ajax({
+
+
+                        poListsArr = [];
+                        for(i=0; i<productList.length; i++){
+                            poListsArr.push({
+                                name: productList[i].innerText,
+                                qtyOrdered: qtyOrderedList[i].innerText,
+                                qtyReceived: qtyReceivedList[i].innerText,
+                                supplier: supplierList[i].innerText,
+                                status: statusList[i].innerText,
+                                id: rowIds[i].value
+                            });
+                        }
+
+                        // productList.forEach((product, key) => {
+                        //     poListsArr[key]['product'] = product.innerText;
+                        // });
+
+                        // Store in HTML
+                        var poListHtml = '\
+                            <table id="formTable_'+ batchNumber +'">\
+
+This will console log the batchNumber if you click update
+
+BootstrapDialog.confirm({
+    type: BootstrapDialog.TYPE_PRIMARY,
+    title: 'Update Purchase Order: Batch #: <strong>'+ batchNumber +'</strong>',
+    message: poListHtml,
+    callback: function(toAdd){
+        //If we add
+        if(toAdd){
+            console.log(batchNumber);
+            return;
+
+            // Get all purchase order product records
+            productList = document.querySelectorAll('#' + batchNumberContainer + ' .po_product');
+            qtyOrderedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_ordered');
+            qtyReceivedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_received');
+
+
+                                    productList = document.querySelectorAll('#' + batchNumberContainer + ' .po_product');
+                                    qtyOrderedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_ordered');
+                                    qtyReceivedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_received');
+                                    supplierList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_supplier');
+                                    statusList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_status');
+                                    rowIds = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_row_id');
+
+From above code changed to below code
+
+
+
+                        BootstrapDialog.confirm({
+                            type: BootstrapDialog.TYPE_PRIMARY,
+                            title: 'Update Purchase Order: Batch #: <strong>'+ batchNumber +'</strong>',
+                            message: poListHtml,
+                            callback: function(toAdd){
+                                //If we add
+                                if(toAdd){
+                                    formTableContainer = 'formTable_' + batchNumber;
+
+                                    // Get all purchase order product records
+                                    qtyReceivedList = document.querySelectorAll('#' + formTableContainer + ' .po_qty_received');
+                                    statusList = document.querySelectorAll('#' + formTableContainer + ' .po_qty_status');
+                                    rowIds = document.querySelectorAll('#' + formTableContainer + ' .po_qty_row_id');
+
+                                    poListsArrForm = [];
+                                    for(i=0; i<qtyReceivedList.length; i++){
+                                        poListsArrForm.push({
+                                            qtyReceived: qtyReceivedList[i].value,
+                                            status: statusList[i].value,
+                                            id: rowIds[i].value
+                                        });
+                                    }
+
+                                    console.log(poListsArrForm);
+                                    return;
+
+                                    alert('Will be deleting');
+                                    $.ajax({
+                                    method: 'POST',
+                                    data: {
+
+
+We only kept the only one that needed changing
+
+The line of code below has hold input so we add input here
+qtyReceivedList = document.querySelectorAll('#' + formTableContainer + ' .po_qty_received input');
+
+Array(4) [ {…}, {…}, {…}, {…} ]
+​
+0: Object { qtyReceived: "", status: "pending", id: "51" }
+​
+1: Object { qtyReceived: "", status: "pending", id: "49" }
+​
+2: Object { qtyReceived: "", status: "pending", id: "52" }
+​
+3: Object { qtyReceived: "", status: "pending", id: "50" }
+​
+length: 4
+
+the input we added in here:
+qtyReceivedList = document.querySelectorAll('#' + formTableContainer + ' .po_qty_received input');
+
+And that makes this, not make undefined
+0: Object { qtyReceived: "", status: "pending", id: "51" }
+
+
+[===== Start of Workable Unfinised Code =========]
+<?php    
+    session_start();
+
+    if(!isset($_SESSION['user'])) header('location: login.php');
+    
+    $show_table = 'suppliers';
+    $suppliers = include('database/show.php');
+
+?>
+
+<!--[==============THIS IS USER-ADD.PHP=================]--> 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View Purchase Orders - Inventory Management System</title>
+        <?php include('partials/app-header-scripts.php'); ?>
+    </head>
+    <body>
+        <div id="dashboardMainContainer">
+            <?php include('partials/app-sidebar.php') ?>
+            <div class="dashboard_content_container" id="dashboard_content_container">
+                <?php include('partials/app-topnav.php') ?>
+                <div class="dashboard_content">
+                    <div class="dashboard_content_main">
+                        <div class="row">
+                            <div class="column column-12">
+                                <h1 class="section_header"><i class="fa fa-list"></i> List of Purchase Orders</h1>
+                                <div class="section_content">
+                                    <div class="poListContainers">
+                                        <?php
+                                            $stmt = $conn->prepare("
+                                                            SELECT order_product.id, products.product_name, order_product.quantity_ordered, users.first_name, order_product.batch, order_product.quantity_received,
+                                                                    users.last_name, suppliers.supplier_name, order_product.status, order_product.created_at
+                                                                FROM order_product, suppliers, products, users
+                                                                WHERE
+                                                                    order_product.supplier = suppliers.id
+                                                                        AND
+                                                                    order_product.product = products.id
+                                                                        AND
+                                                                    order_product.created_by = users.id
+                                                                ORDER BY
+                                                                    order_product.created_at DESC
+                                                            ");
+                                            $stmt->execute();
+                                            $purchase_orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                            $data = [];
+                                            foreach($purchase_orders as $purchase_order){
+                                                $data[$purchase_order['batch']][] = $purchase_order;
+                                            }
+
+                                        ?>
+
+                                        <?php
+                                            foreach($data as $batch_id => $batch_pos){
+                                        ?>
+
+                                        <div class="poList" id="container-<?= $batch_id ?>">
+                                            <p>Batch #: <?= $batch_id ?> </p>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Product</th>
+                                                        <th>Qty Ordered</th>
+                                                        <th>Qty Received</th>
+                                                        <th>Supplier</th>
+                                                        <th>Status</th>
+                                                        <th>Ordered By</th>
+                                                        <th>Created Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                        foreach($batch_pos as $index => $batch_po) {
+                                                    ?>
+                                                    <tr>
+                                                        <td> <?= $index + 1 ?> </td>
+                                                        <td class="po_product"><?= $batch_po['product_name']?></td>
+                                                        <td class="po_qty_ordered"><?= $batch_po['quantity_ordered']?></td>
+                                                        <td class="po_qty_received"><?= $batch_po['quantity_received']?></td>
+                                                        <td class="po_qty_supplier"><?= $batch_po['supplier_name']?></td>
+                                                        <td class="po_qty_status"><span class="po-badge po-badge-<?= $batch_po['status'] ?>"><?= $batch_po['status']?><span></td>
+                                                        <td><?= $batch_po['first_name'] . ' ' . $batch_po['last_name']?></td>
+                                                        <td>
+                                                            <?= $batch_po['created_at']?>
+                                                            <input type="hidden" class="po_qty_row_id" value="<?= $batch_po['id'] ?>">
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </tbody>
+                                            </table>
+                                            <div class="poOrderUpdateBtnContainer alignRight">
+                                                <button class="appBtn updatePoBtn" data-id="<?= $batch_id ?>">Update</button>
+                                            </div>
+                                        </div>
+
+                                        <?php } ?>
+
+                                    </div>
+                                </div>         
+                            </div>
+                        </div>
+                    </div>                           
+                </div>
+            </div>
+        </div>
+    <?php  include('partials/app-scripts.php');  ?>
+
+    <script>
+
+        function script(){
+            var vm = this;
+
+
+            this.registerEvents = function(){
+                document.addEventListener('click', function(e){
+                    targetElement = e.target; // Target element
+                    classList = targetElement.classList;
+
+                    if(classList.contains('updatePoBtn')){
+                        e.preventDefault(); 
+
+                        batchNumber = targetElement.dataset.id;
+                        batchNumberContainer = 'container-' + targetElement.dataset.id;
+
+                        // Get all purchase order product records
+                        productList = document.querySelectorAll('#' + batchNumberContainer + ' .po_product');
+                        qtyOrderedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_ordered');
+                        qtyReceivedList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_received');
+                        supplierList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_supplier');
+                        statusList = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_status');
+                        rowIds = document.querySelectorAll('#' + batchNumberContainer + ' .po_qty_row_id');
+
+                        poListsArr = [];
+                        for(i=0; i<productList.length; i++){
+                            poListsArr.push({
+                                name: productList[i].innerText,
+                                qtyOrdered: qtyOrderedList[i].innerText,
+                                qtyReceived: qtyReceivedList[i].innerText,
+                                supplier: supplierList[i].innerText,
+                                status: statusList[i].innerText,
+                                id: rowIds[i].value
+                            });
+                        }
+
+                        // Store in HTML
+                        var poListHtml = '\
+                            <table id="formTable_'+ batchNumber +'">\
+                                <thead>\
+                                    <tr>\
+                                        <th>Product Name</th>\
+                                        <th>Qty Ordered</th>\
+                                        <th>Qty Received</th>\
+                                        <th>Supplier</th>\
+                                        <th>Status</th>\
+                                    </tr>\
+                                </thead>\
+                                <tbody>';
+
+                        poListsArr.forEach((poList) => {
+                            poListHtml += '\
+                            <tr>\
+                                <td class="po_product alignLeft">'+ poList.name +'</td>\
+                                <td class="po_qty_ordered">'+ poList.qtyOrdered +'</td>\
+                                <td class="po_qty_received"><input class="updateInputStyle" type="number" value="'+ poList.qtyReceived +'"></td>\
+                                <td class="po_qty_supplier alignLeft">'+ poList.supplier +'</td>\
+                                <td>\
+                                    <select class="po_qty_status">\
+                                        <option value="pending" '+ (poList.status == 'pending' ? 'selected' : '') +'>pending</option>\
+                                        <option value="complete" '+ (poList.status == 'complete' ? 'selected' : '') +'>complete</option>\
+                                    </select>\
+                                    <input type="hidden" class="po_qty_row_id" value="'+ poList.id +'">\
+                                </td>\
+                            </tr>\
+                            ';
+                        });
+                        poListHtml += '</tbody></table>';
+
+                        pName = targetElement.dataset.name;
+
+
+
+                        
+                        BootstrapDialog.confirm({
+                            type: BootstrapDialog.TYPE_PRIMARY,
+                            title: 'Update Purchase Order: Batch #: <strong>'+ batchNumber +'</strong>',
+                            message: poListHtml,
+                            callback: function(toAdd){
+                                //If we add
+                                if(toAdd){
+                                    formTableContainer = 'formTable_' + batchNumber;
+
+                                    // Get all purchase order product records
+                                    qtyReceivedList = document.querySelectorAll('#' + formTableContainer + ' .po_qty_received input');
+                                    statusList = document.querySelectorAll('#' + formTableContainer + ' .po_qty_status');
+                                    rowIds = document.querySelectorAll('#' + formTableContainer + ' .po_qty_row_id');
+
+                                    poListsArrForm = [];
+                                    for(i=0; i<qtyReceivedList.length; i++){
+                                        poListsArrForm.push({
+                                            qtyReceived: qtyReceivedList[i].value,
+                                            status: statusList[i].value,
+                                            id: rowIds[i].value
+                                        });
+                                    }
+
+                                    console.log(poListsArrForm);
+                                    return;
+
+                                    //alert('Will be deleting');
+                                    $.ajax({
+                                    method: 'POST',
+                                    data: {
+                                        id: pId,
+                                        table: 'products' 
+                                    },
+                                    url: 'database/delete.php',
+                                    dataType: 'json',
+                                    success: function(data){
+                                        message = data.success ? 
+                                            pName + ' succesfully deleted!' : 'Error processing your request!';
+                                        
+                                        BootstrapDialog.alert({
+                                                type: data.success ? BootstrapDialog.TYPE_SUCCESS : BootstrapDialog.TYPE_DANGER,
+                                                message: message,
+                                                callback: function(){
+                                                    if(data.success) location.reload()
+                                                }
+                                        });
+                                            
+                                    }
+
+                                    })
+                                }
+                            }
+                        })
+                        
+                    }
+                });
+
+            },
+
+            this.initialize = function(){
+                this.registerEvents();
+            }
+        }
+
+        var script = new script;
+        script.initialize();
+
+    </script>
+
+    </body>
+</html>
+
+
+[============End==============]
+
+                                    poListsArrForm = [];
+                                    for(i=0; i<qtyReceivedList.length; i++){
+                                        poListsArrForm.push({
+                                            qtyReceived: qtyReceivedList[i].value,
+                                            status: statusList[i].value,
+                                            id: rowIds[i].value
+                                        });
+                                    }
+
+                                    console.log(poListsArrForm);
+
+
+
+                                    $.ajax({
+                                        method: 'POST',
+                                        data: poListsArrForm,
+                                        url: 'database/update-order.php',
+                                        dataType: 'json',
+                                        success: function(data){
+
+keeping this is bad:
+data: poListsArrForm,
+we need an object so we turned it into this:
+                                        data: {
+                                            data: poListsArrForm
+                                        },
+and then this
+                                    $.ajax({
+                                        method: 'POST',
+                                        data: {
+                                            payload: poListsArrForm
+                                        },
+
+
+    $payload = $_POST['payload'];
+    var_dump($payload);
+
+    pay load is kind of like a variable atteched to the post
+
+Think of this things are switching and passing between objects, arrays (Maybe some other data types)
+
+This code below can make deductions and proccess better in the database, on on that specific table
+
+    foreach($purchase_orders as $po){
+        $received = (int) $po['qtyReceived'];
+        $status = $po['status'];
+        $row_id = $po['id'];
+        $qty_ordered = (int) $po['qtyOrdered'];
+
+        $qty_remaining = $qty_ordered - $received;
+
+        $sql = "UPDATE order_product 
+                    SET
+                    quantity_received =?, status =?, quantity_remaining=?
+                    WHERE id =?";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$received, $status, $qty_remaining, $row_id]);
+    }
+
+
+<script src="https://kit.fontawesome.com/9b6ef7dac1.js" crossorigin="anonymous"></script>
+The above responds to this:
+<a href=""><i class="fa-brands fa-apple"></i></a>
+
+<link rel="stylesheet" href="css/font-awesome-4/css/font-awesome.min.css">     
+The above responds to this:
+<a href=""><i class="fa fa-apple"></i></a>
+
+Notice the difference in class, one is available online, while the other can work offline   
+
+echo json_encode($response);
+this line above might be related to try{ } catch
+besides ajax of course
+
+ $.ajax({
+    method: 'POST',
+    data: {
+        payload: poListsArrForm
+    },
+    url: 'database/update-order.php',
+    dataType: 'json',
+    success: function(data){
+        message = 
+
+note that I'll switch the position of view order and product order
+        
+<?php
+    session_start();
+    if(isset($_SESSION['user'])) header('location: dashboard.php');
+    $error_message = '';
+
+    if($_POST){
+        include('database/connection.php');
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $query = 'SELECT * FROM users WHERE users.email="'. $username .'"';
+        
+        $stmt = $conn->prepare($query);
+
+        $stmt->execute();
+        
+        //WHOOO BABY! I SOLVED THIS HASH THING ENCRYPTED PASSWORD ON MY OWN!
+        //https://www.youtube.com/watch?v=D47QI9mGesc&t=445s
+        
+        if($stmt->rowCount() > 0){
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $user = $stmt->fetchAll()[0];
+
+            if(password_verify($password, $user['password'])){
+                
+                $_SESSION['user'] = $user;
+    
+                header('Location: dashboard.php');
+            } else {
+                $error_message = 'Please make sure that username and password are correct.';
+            }
+
+        } else $error_message = 'Please make sure that username and password are correct.';
+    }
+?>
+
+Fixed the password problem, like I fixed the sidebar length problem, and everything else he left out
+Note that query got modified in this update
+
+        if($stmt->rowCount() > 0){
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $user = $stmt->fetchAll()[0];
+
+            if(password_verify($password, $user['password'])){
+                
+                $_SESSION['user'] = $user;
+                header('Location: dashboard.php');
+
+            } else if ($password === $user['password']) {
+                
+                $_SESSION['user'] = $user;
+                header('Location: dashboard.php');
+            
+            } else  {
+
+                $error_message = 'Please make sure that username and password are correct.';
+
+            }
+
+        } else $error_message = 'Please make sure that username and password are correct.';
+    }
+
+This is the solution to the has crypted password
+Since kimdahyun and jeongyeon has normal password not ENCRYPTED
+we set else if do deal with those, as password_verify has problem dealing with those kind
+
+
+
+
+
+
+
+
+
+
+
+
+[Build Admin Dashboard - How To Create a Pie Chart using Highcharts Plugin JavaScript 31:]
+
+
+    <script>
+        Highcharts.chart('container', {
+            chart: {
+                type: 'pie'
+
+
+This above connects to this below
+
+
+                        <figure class="highcharts-figure">
+                            <div id="container"></div>
+                            <p class="highcharts-description">
+
+Below was modified
+
+                        distance: -40,
+                        format: '{point.percentage:.1f}%',
+                        style: {
+                            fontSize: '1.2em',
+
+    $stmt = $conn->prepare("SELECT COUNT(*) as status_count FROM order_product WHERE order_product.status='" . $status . "'");
+
+It will take on the form/var? of status_count
+
+result form this:
+(array) [1 element]
+status_count: (string) "18"
+(array) [1 element]
+status_count: (string) "6"
+(array) [1 element]
+status_count: (string) "2"
+
+
+We removed fetch_assoc into this: $row = $stmt->fetch();
+which led to this result
+
+(array) [2 elements]
+status_count: (string) "18"
+0: (string) "18"
+(array) [2 elements]
+status_count: (string) "6"
+0: (string) "6"
+(array) [2 elements]
+status_count: (string) "2"
+0: (string) "2"
+
+
+<?php
+
+include('connection.php');
+$statuses = ['pending', 'complete', 'incomplete', 'efef'];
+//This can get print out but it doesnt make sense to add efef
+$results = [];
+
+
+this below gets changed:
+
+            series: [
+                {
+                    name: 'Status',
+                    colorByPoint: true,
+                    data: [
+                        {
+                            name: 'PENDING',
+                            y: 55.02
+                        },
+                        {
+                            name: 'COMPLETED',
+                            sliced: true,
+                            selected: true,
+                            y: 26.71
+                        },
+                        {
+                            name: 'INCOMPLETE',
+                            y: 1.09
+                        }
+                    ]
+                }
+            ]
+
+
+
+//We didnt do the json encode thing here (po_status_pie_graph.php)? When we pulled this to dashboard with  json encodeWhy?
+
+
+        var graphData = <?= json_encode($results) ?>;
+
+Graphdata somehow influences the graph and the shapes depends on the data pulled
+
+                // pointFormat: '{series.name}: <b>{point.percentage}</b>',
+                // valueSuffix: '%'
+
+This two lines above, make the percentage stuff appear.
+And it just becomes plain actual numbers
+
+
+                // pointFormat: '{series.name}: <b>{point.percentage}</b>',
+                // valueSuffix: '%'
+                pointFormatter: function(){
+                    var point = this,
+                        series = point.series;
+
+                    return `<b>${series.name}</b>: <b>${point.y}</b>`
+                }
+
+first is percentage, second is plain number
+
+His code is too different to mine, the one he copied is either
+deprecated or I copied a different one, either way, its not possible to keep up with him
+
+/*Stuff code below Copied from jsfiddle of pie chart*/
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 320px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+input[type="number"] {
+    min-width: 50px;
+}
+
+/*End of copied code*/
+/*Weird its a plugin? Not a framework or API
+ So there's three things you can attach?*/
+/*If somethings amiss fix or remove this*/
+
+
+            tooltip: {
+                // pointFormat: '{series.name}: <b>{point.percentage}</b>',
+                // valueSuffix: '%'
+                pointFormatter: function(){
+                    var point = this,
+                        series = point.series;
+
+                    return `<b>${series.name}</b>: <b>${point.y}</b>`
+                }
+            },
+
+<?php    
+    session_start();
+
+    if(!isset($_SESSION['user'])) header('location: login.php');
+
+    $user = $_SESSION['user'];
+
+    // Get graph data - purchase order by status
+    include('database/po_status_pie_graph.php');
+
+    // var_dump($results);
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Build Admin Dashboard - How To Create a Bar Chart using Highcharts Plugin JavaScript 32:]
+
+var w = window.innerWidth;
+var h = window.innerHeight; 
+
+console.log(w, h)
+
+you can use this to get current window size
+useful for using @media
+
+
+div.dashboard_charts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap !important;
+    flex-flow: wrap;
+    padding: 10px;
+}
+
+rect.highcharts-background{
+    overflow-wrap: normal;
+    overflow: hidden;
+    width: auto;
+}
+
+text.highcharts-credits{
+    overflow-wrap: normal;
+    overflow: hidden;
+    width: auto;
+}
+
+@media (max-width: 895px){
+    div.dashboard_charts{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+I fixed this up the above codes to make our page
+more dynamic as it was overflowing before when squished
+
+    // Get graph data - supplier product count
+    include('database/supplier_product_bar_graph.php');
+
+These highcharts API/Plugin are object array stuff
+complex datatypes kinda mixed with primitive data types
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script>
+        var graphData = <?= json_encode($results) ?>;
+        
+        Highcharts.chart('container', {
+            chart: {
+                type: 'pie',
+                DataLabelsOverflowValue: 'justify'
+            },
+            title: {
+                text: 'Purchase Orders By Status',
+                align: 'left'
+            },
+            tooltip: {
+                pointFormatter: function(){
+                    var point = this,
+                        series = point.series;
+
+                    return `<b>${series.name}</b>: <b>${point.y}</b>`
+                }
+            },
+            subtitle: {
+                text:
+                'Source:<a href="./view-order.php" target="_default"> Product Orders</a>'
+            },
+            plotOptions: {
+                series: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: [{
+                        enabled: true,
+                        distance: 20
+                    }, 
+                    {
+                        enabled: true,
+                        distance: -40,
+                        format: '{point.percentage:.2f}%',
+                        style: {
+                            fontSize: '1.4em',
+                            textOutline: 'none',
+                            opacity: 0.7
+                        },
+                        filter: {
+                            operator: '>',
+                            property: 'percentage',
+                            value: 10
+                        }
+                    }]
+                }
+            },
+            series: [
+                {
+                    name: 'Status',
+                    colorByPoint: true,
+                    data: graphData
+                }
+            ]
+        });
+        Highcharts.chart('containerBarChart', {
+            chart: {
+                type: 'column',
+                DataLabelsOverflowValue: 'justify'
+            },
+            title: {
+                text: 'Product Count Assigned To Supplier',
+                align: 'left'
+            },
+            subtitle: {
+                text:
+                    'Source: <a target="_blank" ' +
+                    'href="./supplier-view.php"> Supplier View</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Apple', 'ChowQueen', 'Nestle'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Suppliers'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [
+                {
+                    name: 'Corn',
+                    data: [406292, 260000, 107000]
+                },
+                {
+                    name: 'Wheat',
+                    data: [51086, 136000, 5500]
+                },
+                {
+                    name: 'Milk',
+                    data: [51086, 136000, 5500]
+                },
+                {
+                    name: 'Eggs',
+                    data: [51086, 136000, 5500]
+                }
+            ],
+        });
+
+    </script>
+    </body>
+</html>
+
+This code below fetchAll
+
+include('connection.php');
+
+// Query suppliers
+$stmt = $conn->prepare("SELECT * FROM suppliers");
+$stmt->execute();
+$rows = $stmt->fetchAll();
+
+var_dump($rows);
+die;
+
+This below line shows how much each suppliers has orderProduct or something
+
+foreach($rows as $row){
+    $id = $row['id'];
+
+    // Query count
+    $stmt = $conn->prepare("SELECT COUNT(*) as p_count FROM productsuppliers WHERE productsuppliers.supplier='" . $id . "'");
+    $stmt->execute();
+    $row = $stmt->fetch();
+
+    $count = $row['p_count']; 
+    var_dump($count);
+};
+
+die;
+
+
+The results:
+string(1) "4" string(1) "3" string(1) "2"
+
+this correlates with the supplier column in productsuppliers
+Nestle has four
+ChowQueen has three
+Apple has two
+
+I think adding [] on things are a shorthand way of turning things to an array so it can hold
+    $bar_chart_data[] = $count;
+
+        var barGraphData = <?= json_encode($bar_chart_data) ?>;
+        var barGraphCategories = <?= json_encode($categories) ?>;
+
+        console.log(barGraphCategories, barGraphData);
+        Highcharts.chart('containerBarChart', {
+            chart: {
+                type: 'column',
+                DataLabelsOverflowValue: 'justify'
+            },
+            title: {
+                text: 'Product Count Assigned To Supplier',
+
+$bar_chart_data[] = (int) $count;
+This above line makes it an int
+
+
+    <script>
+        var graphData = <?= json_encode($results) ?>;
+        
+        Highcharts.chart('container', {
+            chart: {
+                type: 'pie',
+                DataLabelsOverflowValue: 'justify'
+            },
+            title: {
+                text: 'Purchase Orders By Status',
+                align: 'left'
+            },
+            tooltip: {
+                pointFormatter: function(){
+                    var point = this,
+                        series = point.series;
+
+                    return `<b>${series.name}</b>: <b>${point.y}</b>`
+                }
+            },
+            subtitle: {
+                text:
+                'Source:<a href="./view-order.php" target="_default"> Product Orders</a>'
+            },
+            plotOptions: {
+                series: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: [{
+                        enabled: true,
+                        distance: 20
+                    }, 
+                    {
+                        enabled: true,
+                        distance: -40,
+                        format: '{point.percentage:.2f}%',
+                        style: {
+                            fontSize: '1.4em',
+                            textOutline: 'none',
+                            opacity: 0.7
+                        },
+                        filter: {
+                            operator: '>',
+                            property: 'percentage',
+                            value: 10
+                        }
+                    }]
+                }
+            },
+            series: [
+                {
+                    name: 'Status',
+                    colorByPoint: true,
+                    data: graphData
+                }
+            ]
+        });
+
+        var barGraphData = <?= json_encode($bar_chart_data) ?>;
+        var barGraphCategories = <?= json_encode($categories) ?>;
+
+        Highcharts.chart('containerBarChart', {
+            chart: {
+                type: 'column',
+                DataLabelsOverflowValue: 'justify'
+            },
+            title: {
+                text: 'Product Count Assigned To Supplier',
+                align: 'left'
+            },
+            subtitle: {
+                text:
+                    'Source: <a target="_blank" ' +
+                    'href="./supplier-view.php"> Supplier View</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: barGraphCategories,
+                crosshair: true,
+                accessibility: {
+                    description: 'Suppliers'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Product Count'
+                }
+            },
+            tooltip: {
+                pointFormatter: function(){
+                    var point = this,
+                        series = point.series;
+                    
+                    return `<b>${point.category}</b>: ${point.y}`
+                }
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [
+                {
+                    name: 'Suppliers',
+                    data: barGraphData
+                }
+            ],
+        });
+
+    </script>
+    </body>
+</html>
+
+
+include('connection.php');
+
+// Query suppliers
+$stmt = $conn->prepare("SELECT id, supplier_name FROM suppliers");
+$stmt->execute();
+$rows = $stmt->fetchAll();
+
+$categories = [];
+$bar_chart_data = [];
+
+// Query supplier product count
+foreach($rows as $row){
+    $id = $row['id'];
+    $categories[] = $row['supplier_name'];
+
+    // Query count
+    $stmt = $conn->prepare("SELECT COUNT(*) as p_count FROM productsuppliers WHERE productsuppliers.supplier='" . $id . "'");
+    $stmt->execute();
+    $row = $stmt->fetch();
+
+    $count = $row['p_count'];
+    $bar_chart_data[] = (int) $count;
+};
+
+https://stackoverflow.com/questions/7414287/how-do-you-change-the-colour-of-each-category-within-a-highcharts-column-chart
+
+    $count = $row['p_count'];
+    $bar_chart_data[] = [
+        'y' => (int) $count,
+        'color' => 'red'
+    ];
+
+You need the $key here to use the $colors array
+foreach($rows as $key => $row){
+
+    $bar_chart_data[] = [
+        'y' => (int) $count,
+        'color' => $colors[$key]
+    ];
+}
+
+Updated code below, comprehend it
+
+$categories = [];
+$bar_chart_data = [];
+
+$colors = ['#FF0000','#0000FF','#FF00FF','#00FF00','#FFFF00','#00FFFF','#FFC0CB','#FFA500','#7FFFD4'];
+$counter = 0;
+
+// Query supplier product count
+foreach($rows as $key => $row){
+
+    $id = $row['id'];
+    $categories[] = $row['supplier_name'];
+
+    // Query count
+    $stmt = $conn->prepare("SELECT COUNT(*) as p_count FROM productsuppliers WHERE productsuppliers.supplier='" . $id . "'");
+    $stmt->execute();
+    $row = $stmt->fetch();
+
+    $count = $row['p_count'];
+
+    //What this means is if not set the counter is set to zero
+    if(!isset($colors[$key])) $counter=0;
+
+    $bar_chart_data[] = [
+        'y' => (int) $count,
+        'color' => $colors[$counter]
+    ];
+
+    $counter++;
+}
+
+?>
+
+
+
+
+
+
+
+
+[Add and Manage Product Delivery Records in MySQL Database using PHP - Inventory System 33:]
+
+
+Records every transactions - when stocks arrive
+
+Add product quantity
+- to main product table - qty
+- to batch table (aggregate)
+
+When saving, make sure the qty is set to 0
+- If it is zero, we don't include in saving
+
+Create a new table
+- Connects row id to the new table
+- id, order_product_id, qty arrive, data received, update
+
+we made order_product_history at this point,
+he really just doesn't follow the diagram he made
+
+
+                                <td class="po_qty_received"><input class="updateInputStyle" type="number" value="'+ poList.qtyReceived +'"></td>\
+
+$sql = "UPDATE order_product 
+            SET
+            quantity_received=?, status=?, quantity_remaining=?
+            WHERE id =?";
+
+you have to write or type status=? again when changing
+status is its own keyword thing probably so it conflicts with system
+if not set again to let the system know its a variable/column
+
+remember that the (int) being placed might be important when database int rows/columns are in mind
+
+Rewatch this video again it got so fucking confusing, let's make sure
+nothing got left out or went wrong, let's do that later.
+
+
+
+
+
+
+
+
+
+
+[Add and Manage Product Delivery Records in MySQL Database using PHP - Inventory System 34:]
+
+We kind of skimmed this one but you can revisit this for more clarification
+as to why we casually did this was because theres nothing much new introduced
+
+So the new order_product_history makes it so whenever something is being added
+it makes a mark on that table 
+
+Also you can delete the batch things in order_product table as Its
+impossible to remove outside of that table, because you now of its relations
+
+Also you can see the stock in products table, its affected by the order received.
+At this point we'll ease in our attention to this course, moving forward 
+we'll be just casually getting the code and only after the course is finished
+will we dive into why these codes are like this or set like this
+
+
+
+
+
+
+
+
+
+
+[Fetching Main Product Stock and Delivery Records in MySQL Database using PHP 35:]
+
+
+Start at 1:00 minute
+
+The first line ads comma
+<td class="lastName"><?= number_format($product['stock']) ?></td> = 184,123
+<td class="lastName"><?= $product['stock'] ?></td>  = 184123
+
+
+Changed/added some new elements/stuff at product-view and view-order
+
+
+    // var_dump($stmt->fetchAll());
+
+                        $.get('database/view-delivery-history.php', {id: id}, function(){
+
+                        }, 'json');
+
+This line below makes date more readble, also learn how to fix the time using other coutry's timezone 
+
+<td>'+ (new Date(row['date_received'])).toDateString() +'</td>\
+
+Other variations below:
+
+                                rows = '';
+                                data.forEach((row, id)=> {
+                                    receivedDate = new Date(row['date_received']);
+                                    rows += '\
+                                        <tr>\
+                                            <td>'+ (id + 1) +'</td>\
+                                            <td>'+ receivedDate.toUTCString() + ' ' + receivedDate.getUTCHours() + ':' + receivedDate.getUTCMinutes() +'</td>\
+                                            <td>'+ row['qty_received'] +'</td>\
+                                        </tr>\
+                                        ';
+
+Holy shit! the above block of code fixes the problem, the time it makes now matches with philippine time, the time though is 3 hours late compared to ph time
+                                            <td>'+ receivedDate.toUTCString() + ' ' + receivedDate.getUTCHours() + ':' + receivedDate.getUTCMinutes() +'</td>\
+
+
+Below is another variation
+                                rows = '';
+                                data.forEach((row, id)=> {
+                                    receivedDate = new Date(row['date_received']);
+                                    rows += '\
+                                        <tr>\
+                                            <td>'+ (id + 1) +'</td>\
+                                            <td>'+ receivedDate.toUTCString()  +'</td>\
+                                            <td>'+ row['qty_received'] +'</td>\
+                                        </tr>\
+                                        ';
+                                });
+
+
+Also I just realized you cant change pending to complete or vice versa ursa, if you dont add number.
+Take note that previous updates before this addition won't be added to the what appears when this new button is clicked
+
+
+    include('connection.php');
+
+    $id = $_GET['id'];
+
+    $stmt = $conn->prepare("SELECT * FROM order_product_history WHERE order_product_id=$id ORDER BY date_received DESC");
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    echo json_encode($stmt->fetchAll());
+
+    // var_dump($stmt->fetchAll());
+?>
+
+                    // If deliveries Btn is clicked
+                    if(classList.contains('appDeliveryHistory')){
+                        let id = targetElement.dataset.id;
+
+                        $.get('database/view-delivery-history.php', {id: id}, function(data){
+                            if(data.length){
+
+                                rows = '';
+
+
+
+
+
+
+
+
+[Build Admin Dashboard - Create a Line Spline Chart using Highcharts Plugin JavaScript 36:]
+
+/*This makes the chart covers the space it has*/
+#deliveryHistory{
+    height: 100%;
+    width: 100%;
+}
+
+unused code
+
+        series: [{
+                name: 'Installation & Developers',
+                data: [43934, 48656, 65165, 81827, 112143, 142383,
+                    171533, 165174, 155157, 161454, 154610]
+            }, {
+                name: 'Manufacturing',
+                data: [24916, 37941, 29742, 29851, 32490, 30282,
+                    38121, 36885, 33726, 34243, 31050]
+            }, {
+                name: 'Sales & Distribution',
+                data: [11744, 30000, 16005, 19771, 20185, 24377,
+                    32147, 30912, 29243, 29213, 25663]
+            }, {
+                name: 'Operations & Maintenance',
+                data: [null, null, null, null, null, null, null,
+                    null, 11164, 11218, 10077]
+            }, {
+                name: 'Other',
+                data: [21908, 5548, 8105, 11248, 8989, 11816, 18274,
+                    17300, 13053, 11906, 10073]
+            }],
+
+            responsive: {
+
+
+
+/*This makes the chart covers the space it has*/
+#deliveryHistory{
+    padding-top: 10px;
+    height: 100%;
+    width: 90%;
+}
+
+removed
+
+           xAxis: {
+                accessibility: {
+                    rangeDescription: 'Range: 2010 to 2020'
+                }
+            },
+
+Below we removed the limainMenu showHideSubMenu, just a test
+
+                    <li><a class="subMenuLink" href="./product-order.php"><i class="fa fa-circle-o"></i> Create Order</a></li> 
+                </ul>
+            </li>
+            <li class="liMainMenu showHideSubMenu">
+                <a href="javascript:void(0);" class="liMainMenu_link showHideSubMenu">
+                    <i class="fa fa-user-plus showHideSubMenu"></i>
+                    <span class="menuText showHideSubMenu">User</span>
+                    <i class="fa fa-angle-left mainMenuIconArrow showHideSubMenu"></i>
+
+    // Get line graph data - delivery history per day
+    include('database/supplier_product_bar_graph.php');
+
+
+    
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 2010
+                }
+            },
+
+
+$line_data = array_values($line_data);
+

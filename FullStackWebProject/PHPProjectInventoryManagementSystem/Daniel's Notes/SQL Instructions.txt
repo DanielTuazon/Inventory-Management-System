@@ -1,0 +1,66 @@
+Inventory Database:
+order_product
+order_product_history
+products
+productsuppliers
+suppliers
+users
+
+order_product:
+id int(11) auto_increment primary key
+supplier int(11) foreign key
+product int(11) foreign key
+quantity_ordered int(11)
+quantity_received int(11)
+quantity_remaining int(11)	
+status varchar
+batch int(20)
+created_by int(11) foreign key
+created_at datetime
+updated_at datetime
+
+order_product_history:
+id int(11) auto_increment primary key
+order_product_id int(11) foreign key
+qty_received int(11) 
+date_received datetime
+date_updated datetime
+
+products:
+id int(11) auto_increment primary key
+product_name varchar(191)
+description varchar(200)
+img varchar(100)
+stock int(11)
+created_by int(11) foreign key
+created_at datetime
+updated_at datetime
+
+productsuppliers:
+id int(11) auto_increment primary key
+supplier int(11) foreign key
+product int(11) foreign key
+updated_at datetime
+created_at datetime
+
+suppliers:
+id int(11) auto_increment primary key
+supplier_name varchar(191)
+supplier_location varchar(191)
+email varchar(100)
+created_by int(11) foreign key
+created_at datetime
+updated_at datetime
+
+users:
+id int(11) auto_increment primary key
+first_name varchar(50)
+last_name varchar(50)
+password varchar(300)
+email varchar(50)
+created_at datetime
+updated_at datetime
+
+
+
+
